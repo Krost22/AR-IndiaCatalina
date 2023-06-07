@@ -5,11 +5,12 @@ using UnityEngine.XR;
 using UnityEngine.XR.ARFoundation;
 public class TrackedImageSolver : MonoBehaviour
 {
+    [SerializeField]
     private ARTrackedImageManager _arManager;
     // Start is called before the first frame update
     private void Awake()
     {
-        _arManager = FindObjectOfType<ARTrackedImageManager>();
+        _arManager = this.gameObject.GetComponent<ARTrackedImageManager>();
     }
 
     private void OnEnable()

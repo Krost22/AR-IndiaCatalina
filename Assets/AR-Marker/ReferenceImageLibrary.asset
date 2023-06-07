@@ -23,7 +23,17 @@ MonoBehaviour:
     m_SerializedTextureGuid:
       m_GuidLow: 14345281690386960045
       m_GuidHigh: 16806563563762109643
-    m_Size: {x: 0, y: 0}
-    m_SpecifySize: 0
+    m_Size: {x: 0.1, y: 0.1}
+    m_SpecifySize: 1
     m_Name: IndiaCatalina
-    m_Texture: {fileID: 0}
+    m_Texture: {fileID: 2800000, guid: 5e6e0eadadb1c714cb4c102984e83ce9, type: 3}
+  - m_SerializedGuid:
+      m_GuidLow: 5478288410209502575
+      m_GuidHigh: 7025841901253279642
+    m_SerializedTextureGuid:
+      m_GuidLow: 8292313542434687608
+      m_GuidHigh: 4318855842057898650
+    m_Size: {x: 0.1, y: 0.1}
+    m_SpecifySize: 1
+    m_Name: WhatsApp Image 2023-06-07 at 5.38.16 PM
+    m_Texture: {fileID: 2800000, guid: 76fb0a78373b73149a4afb8d81a8ef3b, type: 3}

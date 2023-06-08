@@ -21,9 +21,9 @@ MonoBehaviour:
       m_GuidLow: 5750998219461720562
       m_GuidHigh: 9881003014134125488
     m_SerializedTextureGuid:
-      m_GuidLow: 14345281690386960045
-      m_GuidHigh: 16806563563762109643
-    m_Size: {x: 0.1, y: 0.1}
+      m_GuidLow: 12611232222047114484
+      m_GuidHigh: 93632070407945627
+    m_Size: {x: 0.1, y: 0.064705886}
     m_SpecifySize: 1
-    m_Name: indiacatalina
-    m_Texture: {fileID: 2800000, guid: 5e6e0eadadb1c714cb4c102984e83ce9, type: 3}
+    m_Name: IndiaCatalina
+    m_Texture: {fileID: 2800000, guid: 871414f418e3af049bfd3f38dfa54c01, type: 3}

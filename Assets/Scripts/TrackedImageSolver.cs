@@ -21,6 +21,7 @@ public class TrackedImageSolver : MonoBehaviour
         {
             GameObject newPrefab = Instantiate(prefab, Vector3.zero, Quaternion.identity);
             newPrefab.name = prefab.name;
+            newPrefab.SetActive(false);
             spawnedPrefabs.Add(prefab.name, newPrefab);
         }
     }
@@ -59,10 +60,10 @@ public class TrackedImageSolver : MonoBehaviour
     {
 
         string name = trackedImage.referenceImage.name;
-        Vector3 position = trackedImage.transform.position;
+        Transform transform = trackedImage.transform;
 
         GameObject prefab = spawnedPrefabs[name];
-        prefab.transform.position = position;
+        prefab.transform.position = transform.position + new Vector3(0, 0.125f, 0);
         prefab.SetActive(true);
 
         foreach (GameObject gameObject in spawnedPrefabs.Values)

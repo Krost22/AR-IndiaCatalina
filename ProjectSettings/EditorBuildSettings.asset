@@ -6,10 +6,10 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/MainMenu.unity
+    path: Assets/Custom/Scenes/MainMenu.unity
     guid: 98528f3839d26c849970f1a86e47f56c
   - enabled: 1
-    path: Assets/Scenes/Game.unity
+    path: Assets/Custom/Scenes/Game.unity
     guid: 6bdce89659816455b9f906fc62d19910
   m_configObjects:
     Unity.XR.WindowsMR.Settings: {fileID: 11400000, guid: 744b813df90924c169af73489b8325de,

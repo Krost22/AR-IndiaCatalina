@@ -160,7 +160,7 @@ PrefabInstance:
     - target: {fileID: 7270363402612151855, guid: ddca4132f9e1fc1428bdaddda76c51ff,
         type: 3}
       propertyPath: m_text
-      value: "\nIndia Catalina naci\xF3 a principios del siglo XVI en la actual Colombia.
+      value: "India Catalina naci\xF3 a principios del siglo XVI en la actual Colombia.
         Pertenec\xEDa a la tribu de los Calamari, un grupo de ind\xEDgenas que viv\xEDa
         a lo largo de la costa caribe\xF1a. Catalina era una ni\xF1a brillante y
         curiosa, y aprendi\xF3 a hablar varios idiomas, entre ellos el espa\xF1ol.\r\n\n"
@@ -175,3 +175,38 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ddca4132f9e1fc1428bdaddda76c51ff, type: 3}
+--- !u!1 &2322201678370034426 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1378178399884215337, guid: ddca4132f9e1fc1428bdaddda76c51ff,
+    type: 3}
+  m_PrefabInstance: {fileID: 3682356716952409811}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &6813145718357078255
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2322201678370034426}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a6bc0f867d91da488ed48aa8e6f4a57, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textHolder: {fileID: 6341032069611274492}
+  input: 
+  delay: 0
+  delayBetweenLines: 0
+  sound: {fileID: 8300000, guid: d1ebb7c9d6997b545be2479d5a3da6fd, type: 3}
+--- !u!114 &6341032069611274492 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7270363402612151855, guid: ddca4132f9e1fc1428bdaddda76c51ff,
+    type: 3}
+  m_PrefabInstance: {fileID: 3682356716952409811}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2322201678370034426}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

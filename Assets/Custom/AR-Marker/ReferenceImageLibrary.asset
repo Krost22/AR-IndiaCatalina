@@ -27,3 +27,43 @@ MonoBehaviour:
     m_SpecifySize: 1
     m_Name: IndiaCatalina
     m_Texture: {fileID: 2800000, guid: 0caf51a0ef2a73943876bcfb9715008b, type: 3}
+  - m_SerializedGuid:
+      m_GuidLow: 5181526191630254722
+      m_GuidHigh: 7234432690409576360
+    m_SerializedTextureGuid:
+      m_GuidLow: 649815511523932081
+      m_GuidHigh: 6043571912737122889
+    m_Size: {x: 0.1, y: 0.1}
+    m_SpecifySize: 1
+    m_Name: Botas
+    m_Texture: {fileID: 2800000, guid: cdec37b19bc30904496a3969a214df53, type: 3}
+  - m_SerializedGuid:
+      m_GuidLow: 5355193571661352355
+      m_GuidHigh: 968809281330642615
+    m_SerializedTextureGuid:
+      m_GuidLow: 11309804329303641540
+      m_GuidHigh: 15595230835080885433
+    m_Size: {x: 0.1, y: 0.1}
+    m_SpecifySize: 1
+    m_Name: Castillo
+    m_Texture: {fileID: 2800000, guid: 97518dc47f1d9cf4b9f43643d1636dd8, type: 3}
+  - m_SerializedGuid:
+      m_GuidLow: 4868172016028965551
+      m_GuidHigh: 14829225961121023134
+    m_SerializedTextureGuid:
+      m_GuidLow: 1347972508870237395
+      m_GuidHigh: 3448129822177367689
+    m_Size: {x: 0.1, y: 0.1}
+    m_SpecifySize: 1
+    m_Name: Pegasos
+    m_Texture: {fileID: 2800000, guid: de33dcd3f5da12b4891650e6cd37da2f, type: 3}
+  - m_SerializedGuid:
+      m_GuidLow: 5392373081277431550
+      m_GuidHigh: 9426651138213774480
+    m_SerializedTextureGuid:
+      m_GuidLow: 1820836716393561801
+      m_GuidHigh: 10701023426065399369
+    m_Size: {x: 0.1, y: 0.1}
+    m_SpecifySize: 1
+    m_Name: Torre
+    m_Texture: {fileID: 2800000, guid: aaa07ec9e958194449fec20b1cac8194, type: 3}

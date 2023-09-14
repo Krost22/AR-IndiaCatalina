@@ -5,9 +5,14 @@ using Lean.Touch;
 
 public class MeshPlacer : MonoBehaviour
 {
-    public GameObject[] monumentos = new GameObject[5];
+    [SerializeField]
+    private LayerMask layer;
+
+    [Tooltip("Esta es la lista de monumentos que apareceran al tocar el plano detectado")]
+    public GameObject[] listaMonumentos = new GameObject[5];
     List<GameObject> monumentosTemp_;
     Camera camera;
+  
     // Start is called before the first frame update
     void Start()
     {
@@ -34,8 +39,7 @@ public class MeshPlacer : MonoBehaviour
         
         RaycastHit hit;
        
-
-        if (Physics.Raycast(ray, out hit, 3)) {
+        if (Physics.Raycast(ray, out hit, Mathf.Infinity , layer)) {
             var objetoRng = monumentos[Random.Range(0, monumentos.Length - 1)];
 
             print(objetoRng.name);

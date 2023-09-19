@@ -40,7 +40,7 @@ public class MeshPlacer : MonoBehaviour
         RaycastHit hit;
        
         if (Physics.Raycast(ray, out hit, Mathf.Infinity , layer)) {
-            var objetoRng = monumentos[Random.Range(0, monumentos.Length - 1)];
+            var objetoRng = listaMonumentos[Random.Range(0, listaMonumentos.Length - 1)];
 
             print(objetoRng.name);
 

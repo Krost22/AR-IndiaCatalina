@@ -208,7 +208,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 18.35
+  m_fontSize: 72
   m_fontSizeBase: 196.9
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -607,9 +607,9 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1538058219}
-        m_TargetAssemblyTypeName: ExperienceToggler, Assembly-CSharp
-        m_MethodName: LimpiarEstatuas
+      - m_Target: {fileID: 970857780}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: Limpiar
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1293,7 +1293,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &700187858
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1545,6 +1545,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0896082bd5d8ca1428b9a42371b1be97, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  experienceToggler: {fileID: 1538058219}
 --- !u!4 &970857781
 Transform:
   m_ObjectHideFlags: 0
@@ -2819,7 +2820,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 18
+  m_fontSize: 41.6
   m_fontSizeBase: 14
   m_fontWeight: 400
   m_enableAutoSizing: 1

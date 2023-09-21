@@ -80,7 +80,8 @@ public class ExperienceToggler : MonoBehaviour
         {
             if (objeto.active) Destroy(objeto);
         }
-
+        meshPlacer.MonumentInScene = false;
+        meshPlacer.enabled = true;
     }
 
 }

@@ -7,10 +7,13 @@ public class MeshPlacer : MonoBehaviour
 {
     [SerializeField]
     private LayerMask layer;
+    //se referencia al mismo script para que este sea capaz de desactivarse solo
+    private MeshPlacer meshPlacer;
 
     [Tooltip("Esta es la lista de monumentos que apareceran al tocar el plano detectado")]
     public GameObject[] listaMonumentos = new GameObject[5];
-    List<GameObject> monumentosTemp_;
+    // List<GameObject> monumentosTemp_;
+    public bool MonumentInScene;
     Camera camera;
   
     // Start is called before the first frame update
@@ -39,12 +42,15 @@ public class MeshPlacer : MonoBehaviour
         
         RaycastHit hit;
        
-        if (Physics.Raycast(ray, out hit, Mathf.Infinity , layer)) {
+        if (Physics.Raycast(ray, out hit, Mathf.Infinity , layer)&& MonumentInScene == false) {
             var objetoRng = listaMonumentos[Random.Range(0, listaMonumentos.Length - 1)];
 
             print(objetoRng.name);
 
             Instantiate(objetoRng, hit.point, Quaternion.identity);
+
+            MonumentInScene = true;
+            meshPlacer.enabled = false;
 
 
         }

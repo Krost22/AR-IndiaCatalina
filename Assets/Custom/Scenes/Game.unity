@@ -1574,7 +1574,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85edf283cb777824a8e8027c30b4d756, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  menuSeleccion: {fileID: 0}
+  menuSeleccion: {fileID: 103039308}
+  Toggle: {fileID: 1538058218}
 --- !u!1 &1074559337
 GameObject:
   m_ObjectHideFlags: 0
@@ -2646,7 +2647,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1538058217}
   - component: {fileID: 1538058218}
-  - component: {fileID: 1538058219}
   m_Layer: 5
   m_Name: ToggleEXP
   m_TagString: Untagged
@@ -2723,7 +2723,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1538058219}
+      - m_Target: {fileID: 970857782}
         m_TargetAssemblyTypeName: ExperienceToggler, Assembly-CSharp
         m_MethodName: LimpiarEstatuas
         m_Mode: 1
@@ -2736,19 +2736,6 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   m_IsOn: 0
---- !u!114 &1538058219
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1538058216}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 85edf283cb777824a8e8027c30b4d756, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  menuSeleccion: {fileID: 103039308}
 --- !u!1 &1582973459
 GameObject:
   m_ObjectHideFlags: 0
@@ -2807,7 +2794,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Botas
+  m_text: Botas Viejas
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2834,7 +2821,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 52.35
+  m_fontSize: 18
   m_fontSizeBase: 14
   m_fontWeight: 400
   m_enableAutoSizing: 1

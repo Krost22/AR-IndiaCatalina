@@ -10,7 +10,7 @@ public class ExperienceToggler : MonoBehaviour
    
 
     GameObject sessionOrigin;
-    Toggle Toggle;
+    public Toggle Toggle;
 
     //Modo Marcadores
     ARTrackedImageManager imageManager;
@@ -23,7 +23,7 @@ public class ExperienceToggler : MonoBehaviour
     GameObject[] estatuas;
     private void Awake()
     {
-        Toggle = this.GetComponent<Toggle>();
+        
         sessionOrigin = GameObject.Find("AR Session Origin");
 
         //Modo Marcadores

@@ -2,11 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Lean.Touch;
+using UnityEngine.UI;
+using TMPro;
 
 public class MeshPlacer : MonoBehaviour
 {
     [SerializeField]
     private LayerMask layer;
+
+    [SerializeField]
+    private TMP_Dropdown dropdown;
+
     //se referencia al mismo script para que este sea capaz de desactivarse solo
     private MeshPlacer meshPlacer;
 
@@ -43,18 +49,22 @@ public class MeshPlacer : MonoBehaviour
         RaycastHit hit;
        
         if (Physics.Raycast(ray, out hit, Mathf.Infinity , layer)&& MonumentInScene == false) {
-            var objetoRng = listaMonumentos[Random.Range(0, listaMonumentos.Length - 1)];
 
-            print(objetoRng.name);
-
-            Instantiate(objetoRng, hit.point, Quaternion.identity);
-
-            MonumentInScene = true;
-            meshPlacer.enabled = false;
-
+            InstantiateMesh(hit);
 
         }
         
+
+    }
+
+    public void InstantiateMesh(RaycastHit hit)
+    {
+        var objetoRng = listaMonumentos[dropdown.value];
+
+        Instantiate(objetoRng, hit.point, Quaternion.identity);
+
+        MonumentInScene = true;
+        meshPlacer.enabled = false;
 
     }
 }

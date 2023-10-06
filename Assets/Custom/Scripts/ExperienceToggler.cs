@@ -6,11 +6,15 @@ using UnityEngine.UI;
 
 public class ExperienceToggler : MonoBehaviour
 {
-    public GameObject menuSeleccion;
-   
+    //
+    [SerializeField]
+    private List<Sprite> fondosBotones;
+
+    public List<Image> btnImagenes;
+
+    public GameObject menuInferior;
 
     GameObject sessionOrigin;
-    public Toggle Toggle;
 
     //Modo Marcadores
     ARTrackedImageManager imageManager;
@@ -37,7 +41,14 @@ public class ExperienceToggler : MonoBehaviour
 
     private void Start()
     {
-        
+        //Activamos el modo planos inicialmente
+
+        imageManager.enabled = false;
+        imageSolver.enabled = false;
+
+        planeManager.enabled = true;
+        meshPlacer.enabled = true;
+        menuInferior.SetActive(true);
     }
 
     // Update is called once per frame
@@ -45,32 +56,6 @@ public class ExperienceToggler : MonoBehaviour
     {
         estatuas = GameObject.FindGameObjectsWithTag("Estatua");
 
-        //Modo Marcadores activo
-        if (!Toggle.isOn)
-        {
-            
-
-            imageManager.enabled = true;
-            imageSolver.enabled = true;
-
-            planeManager.enabled = false;
-            meshPlacer.enabled = false;
-            menuSeleccion.SetActive(false);
-
-        }
-        //Modo Planos activo
-        else if (Toggle.isOn)
-        {
-           
-
-            imageManager.enabled = false;
-            imageSolver.enabled = false;
-
-            planeManager.enabled = true;
-            meshPlacer.enabled = true;
-            menuSeleccion.SetActive(true);
-
-        }
     }
 
     public void LimpiarEstatuas()
@@ -81,7 +66,36 @@ public class ExperienceToggler : MonoBehaviour
             if (objeto.active) Destroy(objeto);
         }
         meshPlacer.MonumentInScene = false;
+    }
+
+    public void ModoPlanos()
+    {
+        imageManager.enabled = false;
+        imageSolver.enabled = false;
+
+        planeManager.enabled = true;
         meshPlacer.enabled = true;
+        menuInferior.SetActive(true);
+
+        btnImagenes[0].sprite = fondosBotones[0];
+        btnImagenes[1].sprite = fondosBotones[1];
+
+        LimpiarEstatuas();
+    }
+
+    public void ModoMarcadores()
+    {
+        imageManager.enabled = true;
+        imageSolver.enabled = true;
+
+        planeManager.enabled = false;
+        meshPlacer.enabled = false;
+        menuInferior.SetActive(false);
+
+        btnImagenes[0].sprite = fondosBotones[1];
+        btnImagenes[1].sprite = fondosBotones[0];
+
+        LimpiarEstatuas();
     }
 
 }

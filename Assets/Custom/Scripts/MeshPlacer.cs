@@ -16,8 +16,15 @@ public class MeshPlacer : MonoBehaviour
     //se referencia al mismo script para que este sea capaz de desactivarse solo
     private MeshPlacer meshPlacer;
 
-    [Tooltip("Esta es la lista de monumentos que apareceran al tocar el plano detectado")]
+    [HideInInspector]
     public GameObject[] listaMonumentos = new GameObject[5];
+
+
+    //Se hace una instancia del monumento a spawnear
+    [Tooltip("Este es el monumento enviado por la UI para spawnear")]
+    [SerializeField]
+    GameObject monumentoElegido;
+
     // List<GameObject> monumentosTemp_;
     public bool MonumentInScene;
     Camera camera;
@@ -59,12 +66,17 @@ public class MeshPlacer : MonoBehaviour
 
     public void InstantiateMesh(RaycastHit hit)
     {
-        var objetoRng = listaMonumentos[dropdown.value];
 
-        Instantiate(objetoRng, hit.point, Quaternion.identity);
+        Instantiate(monumentoElegido, hit.point, Quaternion.identity);
 
         MonumentInScene = true;
         meshPlacer.enabled = false;
 
+    }
+
+    public GameObject ReceivePrefab(GameObject prefab)
+    {
+        monumentoElegido = prefab;
+        return prefab;
     }
 }

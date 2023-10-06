@@ -1,15 +1,15 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using System;
 
 public class Clock : MonoBehaviour
 {
-
+    [Header("Agujas")]
     public GameObject secondHand;
     public GameObject minuteHand;
     public GameObject hourHand;
     string oldSeconds;
+
+    [Header("Sonido")]
+    public AudioSource tick;
 
     void Update()
     {
@@ -17,6 +17,7 @@ public class Clock : MonoBehaviour
 
         if (seconds != oldSeconds)
         {
+            tick.PlayOneShot(tick.clip);
             UpdateTimer();
         }
         oldSeconds = seconds;

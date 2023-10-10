@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 03c91ca0dab977740ae2b21d035d7438
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - a Akhir Tahun
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 608d227e3084f344d9cac869d589ec75, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

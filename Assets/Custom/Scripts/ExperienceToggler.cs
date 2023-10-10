@@ -63,7 +63,7 @@ public class ExperienceToggler : MonoBehaviour
         
         foreach (var objeto in estatuas)
         {
-            if (objeto.active) Destroy(objeto);
+            Destroy(objeto);
         }
         meshPlacer.MonumentInScene = false;
     }

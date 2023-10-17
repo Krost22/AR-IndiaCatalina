@@ -8,9 +8,9 @@ public class ExperienceToggler : MonoBehaviour
 {
     //
     [SerializeField]
-    private List<Sprite> fondosBotones;
+    private List<Image> fondosBotones;
 
-    public List<Image> btnImagenes;
+    public List<Image> textoBotones;
 
     public GameObject menuInferior;
 
@@ -77,8 +77,11 @@ public class ExperienceToggler : MonoBehaviour
         meshPlacer.enabled = true;
         menuInferior.SetActive(true);
 
-        btnImagenes[0].sprite = fondosBotones[0];
-        btnImagenes[1].sprite = fondosBotones[1];
+        fondosBotones[0].color=new Color(122,83,56,255);
+        fondosBotones[1].color = new Color(122, 83, 56, 130);
+
+        //textoBotones[0].color = new Color(255,255,255,255);
+        //textoBotones[1].color = new Color(255, 255, 255, 130);
 
         LimpiarEstatuas();
     }
@@ -92,8 +95,11 @@ public class ExperienceToggler : MonoBehaviour
         meshPlacer.enabled = false;
         menuInferior.SetActive(false);
 
-        btnImagenes[0].sprite = fondosBotones[1];
-        btnImagenes[1].sprite = fondosBotones[0];
+        //fondosBotones[1].color = new Color(122, 83, 56, 255);
+       // fondosBotones[0].color = new Color(122, 83, 56, 130);
+
+        //textoBotones[1].color = new Color(255, 255, 255, 255);
+       // textoBotones[0].color = new Color(255, 255, 255, 130);
 
         LimpiarEstatuas();
     }

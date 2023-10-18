@@ -12,6 +12,8 @@ public class ExperienceToggler : MonoBehaviour
 
     public List<Image> textoBotones;
 
+    public List<Sprite> spriteBotones;
+
     public GameObject menuInferior;
 
     GameObject sessionOrigin;
@@ -25,6 +27,10 @@ public class ExperienceToggler : MonoBehaviour
     MeshPlacer meshPlacer;
 
     GameObject[] estatuas;
+
+    Color selectedText = new Color(255, 255, 255, 255);
+
+    Color idleText = new Color(255, 255, 255, 130);
     private void Awake()
     {
         
@@ -43,12 +49,7 @@ public class ExperienceToggler : MonoBehaviour
     {
         //Activamos el modo planos inicialmente
 
-        imageManager.enabled = false;
-        imageSolver.enabled = false;
-
-        planeManager.enabled = true;
-        meshPlacer.enabled = true;
-        menuInferior.SetActive(true);
+        ModoPlanos();
     }
 
     // Update is called once per frame
@@ -77,11 +78,12 @@ public class ExperienceToggler : MonoBehaviour
         meshPlacer.enabled = true;
         menuInferior.SetActive(true);
 
-        fondosBotones[0].color=new Color(122,83,56,255);
-        fondosBotones[1].color = new Color(122, 83, 56, 130);
+        
+        fondosBotones[0].sprite = spriteBotones[0];
+        fondosBotones[1].sprite = spriteBotones[1];
 
-        //textoBotones[0].color = new Color(255,255,255,255);
-        //textoBotones[1].color = new Color(255, 255, 255, 130);
+        textoBotones[0].color = selectedText;
+        textoBotones[1].color = idleText;
 
         LimpiarEstatuas();
     }
@@ -95,11 +97,11 @@ public class ExperienceToggler : MonoBehaviour
         meshPlacer.enabled = false;
         menuInferior.SetActive(false);
 
-        //fondosBotones[1].color = new Color(122, 83, 56, 255);
-       // fondosBotones[0].color = new Color(122, 83, 56, 130);
+        fondosBotones[1].sprite = spriteBotones[0];
+        fondosBotones[0].sprite = spriteBotones[1];
 
-        //textoBotones[1].color = new Color(255, 255, 255, 255);
-       // textoBotones[0].color = new Color(255, 255, 255, 130);
+        textoBotones[1].color = selectedText;
+        textoBotones[0].color = idleText;
 
         LimpiarEstatuas();
     }

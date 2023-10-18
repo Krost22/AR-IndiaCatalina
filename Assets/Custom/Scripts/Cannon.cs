@@ -21,7 +21,7 @@ public class Cannon : MonoBehaviour
         shoot = true;
         cannon.PlayOneShot(cannon.clip);
         smoke.Play();
-        yield return new WaitForSeconds(Random.Range(6, 15));
+        yield return new WaitForSeconds(Random.Range(1f, 3f));
         shoot = false;
     }
 }

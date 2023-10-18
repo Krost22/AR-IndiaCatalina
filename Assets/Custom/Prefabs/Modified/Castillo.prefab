@@ -656,7 +656,7 @@ ParticleSystem:
   emitterVelocityMode: 1
   looping: 0
   prewarm: 0
-  playOnAwake: 1
+  playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 1
   startDelay:
@@ -6576,7 +6576,7 @@ ParticleSystem:
   emitterVelocityMode: 1
   looping: 0
   prewarm: 0
-  playOnAwake: 1
+  playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 1
   startDelay:
@@ -11568,7 +11568,7 @@ ParticleSystem:
   emitterVelocityMode: 1
   looping: 0
   prewarm: 0
-  playOnAwake: 1
+  playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 1
   startDelay:
@@ -16974,7 +16974,7 @@ ParticleSystem:
   emitterVelocityMode: 1
   looping: 0
   prewarm: 0
-  playOnAwake: 1
+  playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 1
   startDelay:
@@ -21883,7 +21883,7 @@ ParticleSystem:
   emitterVelocityMode: 1
   looping: 0
   prewarm: 0
-  playOnAwake: 1
+  playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 1
   startDelay:
@@ -26792,7 +26792,7 @@ ParticleSystem:
   emitterVelocityMode: 1
   looping: 0
   prewarm: 0
-  playOnAwake: 1
+  playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 1
   startDelay:
@@ -31944,6 +31944,8 @@ GameObject:
   - component: {fileID: 20119899168064616}
   - component: {fileID: -1736554749637066290}
   - component: {fileID: -4917008498629894043}
+  - component: {fileID: 1280185321432751412}
+  - component: {fileID: 4677740446341898450}
   m_Layer: 0
   m_Name: Castillo
   m_TagString: Estatua
@@ -32190,6 +32192,69 @@ MonoBehaviour:
   onScreen:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1280185321432751412
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6805961130293345741}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5cc1ae8fa2d71e54caa2a797ba0a79d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectsToFade:
+  - {fileID: 6193354133368197790}
+  - {fileID: 8311205783133129215}
+  - {fileID: 8948620614323396196}
+  - {fileID: 1750553612949248529}
+  - {fileID: 8327764194131442004}
+  - {fileID: 8285540965121365654}
+  - {fileID: 2300097487844614833}
+  - {fileID: 6328268648691301959}
+  - {fileID: 1064530203797336026}
+  - {fileID: 4272650498137046634}
+  - {fileID: 80129573611223767}
+  - {fileID: 4124059080677496318}
+  - {fileID: 7793731087108090019}
+  audiosToFade:
+  - {fileID: 8422274093471448047}
+  - {fileID: 4847709851857204416}
+  - {fileID: 7337660740302878647}
+  - {fileID: 7254036945152360491}
+  - {fileID: 2808946454262172870}
+  - {fileID: 7244102870393389126}
+  - {fileID: 2628244444209496413}
+  - {fileID: 5628678809645423690}
+  - {fileID: 1070745283390330191}
+  - {fileID: 5182837295263103179}
+  waitTime: 5
+  fadeTime: 5
+--- !u!114 &4677740446341898450
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6805961130293345741}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2e7fba768932e341904a3dc7f1d3345, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cannon:
+  - {fileID: 6193354133368197790}
+  - {fileID: 8311205783133129215}
+  - {fileID: 8948620614323396196}
+  - {fileID: 1750553612949248529}
+  - {fileID: 8327764194131442004}
+  - {fileID: 8285540965121365654}
+  - {fileID: 4272650498137046634}
+  - {fileID: 80129573611223767}
+  - {fileID: 4124059080677496318}
+  - {fileID: 7793731087108090019}
+  delay: 5
 --- !u!1 &7244102870393389126
 GameObject:
   m_ObjectHideFlags: 0
@@ -32337,7 +32402,7 @@ ParticleSystem:
   emitterVelocityMode: 1
   looping: 0
   prewarm: 0
-  playOnAwake: 1
+  playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 1
   startDelay:
@@ -37246,7 +37311,7 @@ ParticleSystem:
   emitterVelocityMode: 1
   looping: 0
   prewarm: 0
-  playOnAwake: 1
+  playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 1
   startDelay:
@@ -42155,7 +42220,7 @@ ParticleSystem:
   emitterVelocityMode: 1
   looping: 0
   prewarm: 0
-  playOnAwake: 1
+  playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 1
   startDelay:
@@ -47713,7 +47778,7 @@ ParticleSystem:
   emitterVelocityMode: 1
   looping: 0
   prewarm: 0
-  playOnAwake: 1
+  playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 1
   startDelay:
@@ -52991,6 +53056,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 145400815367918219}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1064530203797336026 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: f7ed7cabd70d982488bab5eb1d2c023d,
+    type: 3}
+  m_PrefabInstance: {fileID: 145400815367918219}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &552508871067305883
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -53181,6 +53252,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1381197347453804512}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2300097487844614833 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: f5a9a6053a7aa40428c863ebfa5b09b1,
+    type: 3}
+  m_PrefabInstance: {fileID: 1381197347453804512}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6499466121078482074
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -53241,6 +53318,21 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 6ea469c205ceb5446afa1985705e71f4,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 6ea469c205ceb5446afa1985705e71f4,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 6ea469c205ceb5446afa1985705e71f4,
+        type: 3}
+      propertyPath: m_LightProbeUsage
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 6ea469c205ceb5446afa1985705e71f4,
+        type: 3}
+      propertyPath: m_ReflectionProbeUsage
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: 6ea469c205ceb5446afa1985705e71f4,
@@ -53350,6 +53442,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fc959b25adc407c429124d149035f9a9, type: 3}
+--- !u!1 &6328268648691301959 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: fc959b25adc407c429124d149035f9a9,
+    type: 3}
+  m_PrefabInstance: {fileID: 6562851999848678166}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &6672459302550906109 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: fc959b25adc407c429124d149035f9a9,

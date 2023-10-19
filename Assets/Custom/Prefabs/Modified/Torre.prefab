@@ -2402,7 +2402,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 6702480332800535822}
   puente: {fileID: 5314591962487410847}
-  delayTime: 5
   fadeObj: {fileID: 7249237971012287184}
 --- !u!1 &2396062909172290140
 GameObject:
@@ -5679,7 +5678,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 171ec1ef671a3c348b4a22402cc2d60c, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.5
+  m_Volume: 0.25
   m_Pitch: 1
   Loop: 0
   Mute: 0

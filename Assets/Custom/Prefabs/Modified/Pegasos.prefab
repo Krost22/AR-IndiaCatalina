@@ -1855,7 +1855,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   camPos: {fileID: 0}
-  panel: {fileID: 6640984450016058701}
+  panel1: {fileID: 883346128366920972}
+  panel2: {fileID: 4205502909795237289}
 --- !u!1 &3874639143591486042
 GameObject:
   m_ObjectHideFlags: 0

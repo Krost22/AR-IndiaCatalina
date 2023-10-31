@@ -16,4 +16,28 @@ public class GameManager : MonoBehaviour
         
     }
 
+    public GameObject obtenerMonumentoActivo()
+    {
+        GameObject[] listaMonumentos;
+
+        listaMonumentos = GameObject.FindGameObjectsWithTag("Estatua");
+
+        GameObject monumentoActivo;
+
+        foreach (var monumento in listaMonumentos)
+        {
+            if(monumento.activeSelf == true)
+            {
+                monumentoActivo = monumento;
+
+            }
+        }
+
+        if (monumentoActivo = null)
+        {
+            return null;
+        }
+        else return monumentoActivo;
+    }
+
 }

@@ -69,6 +69,15 @@ public class ExperienceToggler : MonoBehaviour
         meshPlacer.MonumentInScene = false;
     }
 
+    public void LimpiarPlanos()
+    {
+        GameObject[] planos = GameObject.FindGameObjectsWithTag("ARPlane");
+        foreach (var plano in planos)
+        {
+            Destroy(plano);
+        }
+    }
+
     public void ModoPlanos()
     {
         imageManager.enabled = false;
@@ -104,6 +113,8 @@ public class ExperienceToggler : MonoBehaviour
         textoBotones[0].color = idleText;
 
         LimpiarEstatuas();
+
+        LimpiarPlanos();
     }
 
 }

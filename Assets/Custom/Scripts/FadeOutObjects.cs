@@ -7,7 +7,9 @@ public class FadeOutObjects : MonoBehaviour
     public GameObject[] objectsToFade;
     public GameObject[] audiosToFade;
 
-    public float waitTime;
+    public TimedAnimation timedAnimation;
+
+    //public float waitTime;
     public float fadeTime;
 
     private void Start()
@@ -15,9 +17,14 @@ public class FadeOutObjects : MonoBehaviour
         StartCoroutine("fadeOut");
     }
 
+    private void Update()
+    {
+        
+    }
+
     IEnumerator fadeOut()
     {
-        yield return new WaitForSeconds(waitTime);
+        yield return new WaitForSeconds(timedAnimation.timestamps[0]);
         SetMaterialTransparent();
 
         foreach (GameObject gObject in objectsToFade)

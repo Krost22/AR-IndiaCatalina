@@ -188,7 +188,6 @@ GameObject:
   - component: {fileID: 1235349982543907384}
   - component: {fileID: 7904744102227782530}
   - component: {fileID: 7910466246686138811}
-  - component: {fileID: 4077967655420329318}
   m_Layer: 0
   m_Name: Botas
   m_TagString: Estatua
@@ -438,7 +437,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 80d2856c522111045aee39d7eefd7feb, type: 3}
-  m_PlayOnAwake: 0
+  m_PlayOnAwake: 1
   m_Volume: 0.5
   m_Pitch: 1
   Loop: 0
@@ -523,21 +522,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &4077967655420329318
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1344096261268231877}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7fec7be24ab6afc41bc64d7dff7d8d58, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  audio: {fileID: 7910466246686138811}
-  animator: {fileID: 6403364865155823472}
-  timedAnimation: {fileID: 11400000, guid: 0ae43ba53ff177345af7cc8a8bf81678, type: 2}
 --- !u!1 &2822757143910731171
 GameObject:
   m_ObjectHideFlags: 0

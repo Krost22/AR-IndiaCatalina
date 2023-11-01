@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bebf932b4ca55c24d8fdfdbbe29a161b, type: 3}
-  m_Name: Botas Viejas
+  m_Name: Torre del Reloj
   m_EditorClassIdentifier: 
   stateNames:
-  - abrirPoema
+  - Puente
   timestamps:
-  - 1
+  - 29

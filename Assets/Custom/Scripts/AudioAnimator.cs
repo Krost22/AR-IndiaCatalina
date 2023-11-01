@@ -9,7 +9,7 @@ public class AudioAnimator : MonoBehaviour
     AudioSource audio;
 
     [SerializeField]
-    Animator animator;
+    Animator[] animators;
 
     public TimedAnimation timedAnimation;
 
@@ -44,8 +44,11 @@ public class AudioAnimator : MonoBehaviour
        
         string stateName = timedAnimation.stateNames[index];
 
+        foreach (var animator in animators)
+        {
+            animator.Play(stateName);
+        }
         
-        animator.Play(stateName);
     }
 
 }

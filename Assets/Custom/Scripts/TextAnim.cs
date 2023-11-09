@@ -13,6 +13,7 @@ public class TextAnim : MonoBehaviour
     [SerializeField] float timeBtwnWords;
     [SerializeField] AudioClip[] typingSound;
 
+    [SerializeField] SoundManager soundManager;
     [SerializeField] GameObject hoja;
 
     int i = 0;
@@ -65,7 +66,7 @@ public class TextAnim : MonoBehaviour
 
             if (!char.IsWhiteSpace(currentChar))
             {
-                SoundManager.instance.PlaySound(typingSound[Random.Range(0,typingSound.Length-1)]);
+               soundManager.PlaySound(typingSound[Random.Range(0,typingSound.Length-1)]);
             }
 
             counter += 1;

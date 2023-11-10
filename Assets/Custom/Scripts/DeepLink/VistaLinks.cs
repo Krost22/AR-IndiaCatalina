@@ -8,7 +8,7 @@ public class VistaLinks : MonoBehaviour
     public const string url = "https://lsvtech.github.io/Treasure-Trail-3DVista/index.htm?media-name=";
     public void abrirLink()
     {
-        GameObject monumento = gameManager.obtenerMonumentoActivo();
+        GameObject monumento = gameManager.monumentoEscena;
         switch (monumento.name)
         {
             case "Botas":

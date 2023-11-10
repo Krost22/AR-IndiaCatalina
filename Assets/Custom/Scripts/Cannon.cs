@@ -4,24 +4,21 @@ using UnityEngine;
 
 public class Cannon : MonoBehaviour
 {
-    public AudioSource cannon;
-    public ParticleSystem smoke;
-    bool shoot = false;
+    public AudioSource[] cannonSounds;
+    public ParticleSystem[] smokeParticles;
 
-    void Update()
+    void playCannons()
     {
-        if (shoot == false)
+
+        foreach (AudioSource cannonSound in cannonSounds)
         {
-            StartCoroutine("Randomizer");
+            cannonSound.Play();
+
+        }
+        foreach (ParticleSystem smokeParticle in smokeParticles)
+        {
+            smokeParticle.Play();
         }
     }
-
-    IEnumerator Randomizer() 
-    {
-        shoot = true;
-        cannon.PlayOneShot(cannon.clip);
-        smoke.Play();
-        yield return new WaitForSeconds(Random.Range(1f, 3f));
-        shoot = false;
-    }
+    
 }

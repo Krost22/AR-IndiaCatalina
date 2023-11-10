@@ -425,8 +425,8 @@ MonoBehaviour:
     edad de follet\xEDn\u2026 Las carabelas\r\nse fueron para siempre de tu rada\u2026\r\n\xA1Ya
     no viene el aceite en botijuelas!"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 6c0c79aabbe49ce44baa3a7098d7148b, type: 2}
-  m_sharedMaterial: {fileID: -196918199641039514, guid: 6c0c79aabbe49ce44baa3a7098d7148b,
+  m_fontAsset: {fileID: 11400000, guid: be006693cf7d3b84cbf9bdd4513e7110, type: 2}
+  m_sharedMaterial: {fileID: -9047889104889611069, guid: be006693cf7d3b84cbf9bdd4513e7110,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -451,8 +451,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 18.2
-  m_fontSizeBase: 18.2
+  m_fontSize: 22
+  m_fontSizeBase: 22
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -512,8 +512,8 @@ MonoBehaviour:
     y las pajuelas\u2026<br><br>Pues ya pas\xF3, ciudad amurallada,<br>tu edad de
     follet\xEDn\u2026 Las carabelas<br>se fueron para siempre de tu rada\u2026<br>\xA1Ya
     no viene el aceite en botijuelas!"
-  timeBtwnChars: 0.32
-  timeBtwnWords: 0.2
+  timeBtwnChars: 0.1
+  timeBtwnWords: 0.05
   typingSound:
   - {fileID: 8300000, guid: 68ac7c72f501d7d4393269d79c856292, type: 3}
   - {fileID: 8300000, guid: b16bcedc9d908a24abf9a83257de7a39, type: 3}
@@ -698,7 +698,7 @@ MonoBehaviour:
     desali\xF1o,\r\nbien puedes inspirar ese cari\xF1o\r\nque uno le tiene a sus
     zapatos viejos\u2026"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 6c0c79aabbe49ce44baa3a7098d7148b, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: be006693cf7d3b84cbf9bdd4513e7110, type: 2}
   m_sharedMaterial: {fileID: -196918199641039514, guid: 6c0c79aabbe49ce44baa3a7098d7148b,
     type: 2}
   m_fontSharedMaterials: []
@@ -724,8 +724,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 16
-  m_fontSizeBase: 16
+  m_fontSize: 22
+  m_fontSizeBase: 22
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -763,7 +763,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &6001699165206692914
@@ -783,8 +783,8 @@ MonoBehaviour:
   - "Fuiste heroica en los tiempos coloniales,<br>cuando tus hijos, \xE1guilas caudales,<br>no
     eran una caterva de vencejos.  Mas hoy, plena de rancio desali\xF1o,<br>bien
     puedes inspirar ese cari\xF1o<br>que uno le tiene a sus zapatos viejos\u2026"
-  timeBtwnChars: 0.32
-  timeBtwnWords: 0.2
+  timeBtwnChars: 0.1
+  timeBtwnWords: 0.05
   typingSound:
   - {fileID: 8300000, guid: 68ac7c72f501d7d4393269d79c856292, type: 3}
   - {fileID: 8300000, guid: b16bcedc9d908a24abf9a83257de7a39, type: 3}
@@ -1180,39 +1180,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 6968709318082386258}
   m_PrefabAsset: {fileID: 0}
---- !u!95 &6403364865155823472
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7815080032078685187}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 61ff5490ab6a54844be40417ac3b0d5c, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
---- !u!114 &4143209097779325408
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7815080032078685187}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b151b85b33c16ee439762d81e78f15ee, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!82 &9140090640077480899
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1225,7 +1192,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.15
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -1309,3 +1276,36 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!95 &6403364865155823472
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7815080032078685187}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 61ff5490ab6a54844be40417ac3b0d5c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &4143209097779325408
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7815080032078685187}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b151b85b33c16ee439762d81e78f15ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

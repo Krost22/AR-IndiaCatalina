@@ -12,5 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bebf932b4ca55c24d8fdfdbbe29a161b, type: 3}
   m_Name: Castillo
   m_EditorClassIdentifier: 
-  stateNames: []
-  timestamps: []
+  stateNames:
+  - "Ca\xF1ones"
+  timestamps:
+  - 22

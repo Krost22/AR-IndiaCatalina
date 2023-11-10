@@ -40,7 +40,7 @@ public class PopUp : MonoBehaviour
     
     public void ChangePopUp()
     {
-        var monumentoActivo = gameManager.obtenerMonumentoActivo();
+        var monumentoActivo = gameManager.monumentoEscena;
         
 
         switch (monumentoActivo.name)

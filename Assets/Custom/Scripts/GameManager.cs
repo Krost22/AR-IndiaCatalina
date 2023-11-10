@@ -4,6 +4,8 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     int target = 60;
+    public GameObject monumentoEscena;
+
     void Awake()
     {
         QualitySettings.vSyncCount = 1;
@@ -16,28 +18,26 @@ public class GameManager : MonoBehaviour
         
     }
 
-    public GameObject obtenerMonumentoActivo()
+    private void Update()
+    {
+        obtenerMonumentoActivo();
+    }
+
+    public void obtenerMonumentoActivo()
     {
         GameObject[] listaMonumentos;
 
         listaMonumentos = GameObject.FindGameObjectsWithTag("Estatua");
 
-        GameObject monumentoActivo;
-
         foreach (var monumento in listaMonumentos)
         {
             if(monumento.activeSelf == true)
             {
-                monumentoActivo = monumento;
+                monumentoEscena = monumento;
 
             }
         }
 
-        if (monumentoActivo = null)
-        {
-            return null;
-        }
-        else return monumentoActivo;
     }
 
 }

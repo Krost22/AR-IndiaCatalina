@@ -12,17 +12,23 @@ public class PopUp : MonoBehaviour
     public GameObject popUp;
 
     [SerializeField]
-    private TextAsset[] textos;
+    private TextAsset[] _textosResources;
 
     [SerializeField]
-    private TextMeshProUGUI _textMesh;
+    private TextMeshProUGUI _textMeshContent;
+
+    [SerializeField]
+    private TextMeshProUGUI _textMeshTitle;
+
+    [SerializeField]
+    private Image _spriteMon;
 
     public Sprite[] images;
 
     private void Awake()
     {
        
-        textos = Resources.LoadAll<TextAsset>("Historias");
+        _textosResources = Resources.LoadAll<TextAsset>("Historias");
 
     }
 
@@ -47,11 +53,13 @@ public class PopUp : MonoBehaviour
         {
             case "IndiaCatalina":
 
-                foreach (var texto in textos)
+                foreach (var texto in _textosResources)
                 {
                     if(texto.name == "IndiaCatalina")
                     {
-                        _textMesh.text = texto.text;
+                        _textMeshContent.text = texto.text;
+                        _textMeshTitle.text = "India Catalina";
+                        _spriteMon.sprite = images[0];
                     }
                 }
 
@@ -59,11 +67,13 @@ public class PopUp : MonoBehaviour
 
             case "Pegasos":
 
-                foreach (var texto in textos)
+                foreach (var texto in _textosResources)
                 {
                     if (texto.name == "Pegasos")
                     {
-                        _textMesh.text = texto.text;
+                        _textMeshContent.text = texto.text;
+                        _textMeshTitle.text = "Muelle de los Pegasos";
+                        _spriteMon.sprite = images[1];
                     }
                 }
 
@@ -71,11 +81,13 @@ public class PopUp : MonoBehaviour
 
             case "Botas":
 
-                foreach (var texto in textos)
+                foreach (var texto in _textosResources)
                 {
                     if (texto.name == "Botas")
                     {
-                        _textMesh.text = texto.text;
+                        _textMeshContent.text = texto.text;
+                        _textMeshTitle.text = "Los Zapatos Viejos";
+                        _spriteMon.sprite = images[2];
                     }
                 }
 
@@ -83,11 +95,13 @@ public class PopUp : MonoBehaviour
 
             case "Castillo":
 
-                foreach (var texto in textos)
+                foreach (var texto in _textosResources)
                 {
                     if (texto.name == "Castillo")
                     {
-                        _textMesh.text = texto.text;
+                        _textMeshContent.text = texto.text;
+                        _textMeshTitle.text = "El Castillo San Felipe";
+                        _spriteMon.sprite = images[3];
                     }
                 }
 
@@ -95,11 +109,13 @@ public class PopUp : MonoBehaviour
 
             case "Torre":
 
-                foreach (var texto in textos)
+                foreach (var texto in _textosResources)
                 {
                     if (texto.name == "Torre")
                     {
-                        _textMesh.text = texto.text;
+                        _textMeshContent.text = texto.text;
+                        _textMeshTitle.text = "La Torre del Reloj";
+                        _spriteMon.sprite = images[4];
                     }
                 }
 
@@ -107,7 +123,10 @@ public class PopUp : MonoBehaviour
 
             default:
 
-                _textMesh.text = null;
+                _textMeshContent.text = null;
+                _textMeshTitle.text = null;
+                _spriteMon = null;
+
 
                 break;
         }

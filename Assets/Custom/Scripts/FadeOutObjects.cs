@@ -19,7 +19,7 @@ public class FadeOutObjects : MonoBehaviour
 
     private void Update()
     {
-        
+
     }
 
     IEnumerator fadeOut()
@@ -41,6 +41,10 @@ public class FadeOutObjects : MonoBehaviour
         {
             if (g.name != "Base.002")
                 g.SetActive(false);
+            else if (g.GetComponent<Terrain>() != null)
+            {
+                g.SetActive(false);
+            }
         }
     }
 
@@ -48,16 +52,19 @@ public class FadeOutObjects : MonoBehaviour
     {
         foreach (GameObject g in objectsToFade)
         {
-            foreach (Material m in g.GetComponent<Renderer>().materials)
+            if (g.GetComponent<Terrain>() == null)
             {
-                m.SetFloat("_Mode", 2);
-                m.SetInt("_SrcBlend", (int)UnityEngine.Rendering.BlendMode.SrcAlpha);
-                m.SetInt("_DstBlend", (int)UnityEngine.Rendering.BlendMode.OneMinusSrcAlpha);
-                m.SetInt("_ZWrite", 0);
-                m.DisableKeyword("_ALPHATEST_ON");
-                m.EnableKeyword("_ALPHABLEND_ON");
-                m.DisableKeyword("_ALPHAPREMULTIPLY_ON");
-                m.renderQueue = 3000;
+                foreach (Material m in g.GetComponent<Renderer>().materials)
+                {
+                    m.SetFloat("_Mode", 2);
+                    m.SetInt("_SrcBlend", (int)UnityEngine.Rendering.BlendMode.SrcAlpha);
+                    m.SetInt("_DstBlend", (int)UnityEngine.Rendering.BlendMode.OneMinusSrcAlpha);
+                    m.SetInt("_ZWrite", 0);
+                    m.DisableKeyword("_ALPHATEST_ON");
+                    m.EnableKeyword("_ALPHABLEND_ON");
+                    m.DisableKeyword("_ALPHAPREMULTIPLY_ON");
+                    m.renderQueue = 3000;
+                }
             }
         }
 

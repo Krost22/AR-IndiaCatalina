@@ -12,7 +12,6 @@ Material:
   m_ValidKeywords: []
   m_InvalidKeywords:
   - _ENABLEPROBERELFECTIONS_ON
-  - _ENABLEREALTIMEREFLECTIONS_ON
   - _ENABLEREFLECTIONS_ON
   m_LightmapFlags: 5
   m_EnableInstancingVariants: 0
@@ -83,10 +82,10 @@ Material:
     - _DstBlend: 0
     - _EnableCustomFog: 0
     - _EnableProbeRelfections: 1
-    - _EnableRealtimeReflections: 1
+    - _EnableRealtimeReflections: 0
     - _EnableReflections: 1
     - _Fade: 2
-    - _FarTilingDistance: 1000
+    - _FarTilingDistance: 10
     - _FoamBlend: 0.2
     - _FoamContrast: 0.276
     - _FoamIntensity: 1.92
@@ -99,7 +98,7 @@ Material:
     - _Gloss: 0.7
     - _Glossiness: 0.5
     - _LightWrapping: 2
-    - _MediumTilingDistance: 100
+    - _MediumTilingDistance: 10
     - _Metallic: 0
     - _Mode: 0
     - _NormalStrength: 1.35

@@ -25,6 +25,7 @@ public class PopUp : MonoBehaviour
 
     public Sprite[] images;
 
+
     private void Awake()
     {
        
@@ -35,7 +36,7 @@ public class PopUp : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -48,7 +49,6 @@ public class PopUp : MonoBehaviour
     {
         var monumentoActivo = gameManager.monumentoEscena;
         
-
         switch (monumentoActivo.name)
         {
             case "IndiaCatalina":
@@ -130,5 +130,9 @@ public class PopUp : MonoBehaviour
 
                 break;
         }
+       
+
     }
+
+
 }

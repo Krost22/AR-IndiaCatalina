@@ -1,8 +1,10 @@
 apply plugin: 'com.android.library'
+apply plugin: 'com.google.gms.google-services'
 **APPLY_PLUGINS**
 
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation fileTree(dir: 'libs', include: ['*.jar'], exclude: ['classes.jar'])
+    classpath "com.google.gms:google-services:4.3.14"
 **DEPS**}
 
 android {

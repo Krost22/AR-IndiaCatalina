@@ -26,24 +26,12 @@ public class PopUp : MonoBehaviour
     public Sprite[] images;
 
 
-    private void Awake()
-    {
-       
-        _textosResources = Resources.LoadAll<TextAsset>("Historias");
-
-    }
-
     // Start is called before the first frame update
     void Start()
     {
-
+        _textosResources = Resources.LoadAll<TextAsset>("Historias");
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-       
-    }
     
     public void ChangePopUp()
     {

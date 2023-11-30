@@ -4,11 +4,11 @@ apply plugin: 'com.google.gms.google-services'
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'], exclude: ['classes.jar'])
-    classpath "com.google.gms:google-services:4.3.14"
+    classpath 'com.google.gms:google-services:+'
 **DEPS**}
 
 android {
-    compileSdkVersion **APIVERSION**
+    compileSdkVersion 33
     buildToolsVersion '**BUILDTOOLS**'
 
     compileOptions {
@@ -17,8 +17,8 @@ android {
     }
 
     defaultConfig {
-        minSdkVersion **MINSDKVERSION**
-        targetSdkVersion **TARGETSDKVERSION**
+        minSdkVersion 24
+        targetSdkVersion 33
         ndk {
             abiFilters **ABIFILTERS**
         }

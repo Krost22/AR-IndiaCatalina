@@ -20,9 +20,7 @@
             </intent-filter>
             <meta-data android:name="unityplayer.UnityActivity" android:value="true" />
 			<!-- "AR Required" app, requires "Google Play Services for AR" (ARCore)
-         to be installed, as the app does not include any non-AR features. -->
-			<meta-data android:name="com.google.ar.core" android:value="required" />
-			<meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" />
+         to be installed, as the app does not include any non-AR features. -->			
         </activity>
     </application>
 </manifest>

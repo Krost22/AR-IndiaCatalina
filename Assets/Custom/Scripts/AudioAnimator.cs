@@ -46,7 +46,11 @@ public class AudioAnimator : MonoBehaviour
 
         foreach (var animator in animators)
         {
-            animator.Play(stateName);
+            for (int i = 0; i < animator.layerCount; i++)
+            {
+                animator.Play(stateName,i);
+            }
+            
         }
         
     }

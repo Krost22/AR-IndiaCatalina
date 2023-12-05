@@ -359,6 +359,7 @@ MonoBehaviour:
   - {fileID: 1605161046924001467}
   - {fileID: 5049418598459460962}
   - {fileID: 4469705187131471317}
+  - {fileID: 7201595164928411876}
   timedAnimation: {fileID: 11400000, guid: e3dedeae451ce1949962a560f66c57d9, type: 2}
 --- !u!82 &8162367388479347878
 AudioSource:
@@ -1785,6 +1786,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5653485344304851975}
   - component: {fileID: 6071270554928085052}
+  - component: {fileID: 7201595164928411876}
   m_Layer: 0
   m_Name: 'Sonidos pegasos '
   m_TagString: Untagged
@@ -1814,7 +1816,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6304828090251790118}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: cf2f5062e4957e842805c8517f480563, type: 3}
@@ -1903,6 +1905,27 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!95 &7201595164928411876
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6304828090251790118}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e440bffcfe7f39b47bea8ded92f7fdd3, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &6305559053692086139
 GameObject:
   m_ObjectHideFlags: 0

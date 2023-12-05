@@ -18,4 +18,8 @@ El ejército inglés, debilitado y acosado por los peligros de la naturaleza, se v
 
 Al final, la historia del soldado inglés y su ejército en Cartagena se convirtió en una tragedia. Su amor por la belleza del entorno colonial y su deseo de conquistar el Castillo San Felipe los llevó a su perdición, enfrentándose a las enfermedades, los animales salvajes y las trampas naturales que la naturaleza tenía preparadas para ellos.
 
+<<<<<<< Updated upstream
 Desde su construcción en 1657 El Castillo San Felipe ha hecho referencia a la belleza de Cartagena y al espíritu inquebrantable de la ciudad.
+=======
+Desde su construcción en 1657 El Castillo San Felipe ha hecho referencia a la belleza de Cartagena y al espíritu inquebrantable de la ciudad
+>>>>>>> Stashed changes

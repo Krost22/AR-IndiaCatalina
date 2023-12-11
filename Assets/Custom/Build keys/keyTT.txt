@@ -1,0 +1,4 @@
+custom Keystore > ttuser.Keystore
+
+password KeyStore > 	@@toor1213@@
+Project Key pass  > 	@@toor1213@@

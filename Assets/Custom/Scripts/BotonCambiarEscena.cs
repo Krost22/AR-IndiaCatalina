@@ -1,0 +1,13 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+// Este script debe usarse en un boton canvas con el evento onClick()
+
+public class BotonCambiarEscena : MonoBehaviour
+{
+    public void CambiarEscena(string sceneName) 
+    {
+        LevelManager.Instance.LoadScene(sceneName);
+    }
+}

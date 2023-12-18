@@ -7,8 +7,6 @@ using UnityEngine.UI;
 
 public class LevelManager : MonoBehaviour
 {
-    public static LevelManager Instance;
-
     [SerializeField] private GameObject _mainMenuCanvas;
     [SerializeField] private GameObject _loaderCanvas;
     [SerializeField] private Image _progressBar;
@@ -19,23 +17,6 @@ public class LevelManager : MonoBehaviour
     // [SerializeField] private Sprite[] _messages;                // Array de imagenes que contendran los mensajes de seguridad
 
     private float _target;
-
-    private void Awake()
-    {
-        if (Instance == null)
-        {
-            Instance = this;
-            DontDestroyOnLoad(gameObject);
-        }
-        else 
-        {
-            Destroy(gameObject);
-        }
-
-        DontDestroyOnLoad(_mainMenuCanvas.gameObject);
-        DontDestroyOnLoad(_loaderCanvas.gameObject);
-        DontDestroyOnLoad(_progressBar.gameObject);
-    }
 
     public async void LoadScene(string sceneName) 
     {

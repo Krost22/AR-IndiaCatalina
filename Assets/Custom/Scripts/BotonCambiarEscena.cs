@@ -6,8 +6,15 @@ using UnityEngine;
 
 public class BotonCambiarEscena : MonoBehaviour
 {
-    public void CambiarEscena(string sceneName) 
+    public LevelManager levelManager;
+
+    // public void CambiarEscena(string sceneName) 
+    // {
+    //     LevelManager.Instance.LoadScene(sceneName);
+    // }
+
+    public void CambiarEscena(string sceneName)
     {
-        LevelManager.Instance.LoadScene(sceneName);
+        levelManager.LoadScene(sceneName);
     }
 }

@@ -6136,8 +6136,7 @@ MonoBehaviour:
   - {fileID: 1064530203797336026}
   - {fileID: 6265588801475484107}
   - {fileID: 4964228022458639477}
-  audiosToFade:
-  - {fileID: 8636024902050341347}
+  audiosToFade: []
   timedAnimation: {fileID: 11400000, guid: 1107e75c3d8b6904c86a50691fd78be8, type: 2}
   fadeTime: 5
 --- !u!1 &2524125759284441466
@@ -52563,6 +52562,11 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: f5a9a6053a7aa40428c863ebfa5b09b1,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 777f5e01e7b72c24281d9c668afc81d2, type: 2}
     - target: {fileID: 919132149155446097, guid: f5a9a6053a7aa40428c863ebfa5b09b1,
         type: 3}
       propertyPath: m_Name

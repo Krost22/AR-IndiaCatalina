@@ -4840,9 +4840,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2108917924}
+      - m_Target: {fileID: 2108917918}
         m_TargetAssemblyTypeName: VistaLinks, Assembly-CSharp
-        m_MethodName: abrirLink
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4916,7 +4916,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameManager: {fileID: 970857780}
-  url: https://lsvtech.github.io/Treasure-Trail-3DVista/index.htm?media-name=
 --- !u!1 &3476603964186953257
 GameObject:
   m_ObjectHideFlags: 0

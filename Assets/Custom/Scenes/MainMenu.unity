@@ -2304,7 +2304,7 @@ MonoBehaviour:
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 0}
+  m_TargetGraphic: {fileID: 1657256348}
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
@@ -2808,9 +2808,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 424055778}
-        m_TargetAssemblyTypeName: LevelManager, Assembly-CSharp
-        m_MethodName: CanvasSecurity
+      - m_Target: {fileID: 424055777}
+        m_TargetAssemblyTypeName: NextScene, Assembly-CSharp
+        m_MethodName: QuitGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

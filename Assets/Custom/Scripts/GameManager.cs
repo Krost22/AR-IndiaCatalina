@@ -34,10 +34,7 @@ public class GameManager : MonoBehaviour
             if(monumento.activeSelf == true)
             {
                 monumentoEscena = monumento;
-
             }
         }
-
     }
-
 }

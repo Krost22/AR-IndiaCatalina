@@ -4,6 +4,7 @@ using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using TMPro;
 
 public class LevelManager : MonoBehaviour
 {
@@ -11,10 +12,11 @@ public class LevelManager : MonoBehaviour
     [SerializeField] private GameObject _loaderCanvas;
     [SerializeField] private Image _progressBar;
 
+
     //-- Para los mensajes de seguridad que iran en el popup --
-    // [SerializeField] private GameObject _securityPopup;         // Canvas que contiene las imagenes
-    // [SerializeField] private Image _messageContainer;           // Contenedor del mensaje
-    // [SerializeField] private Sprite[] _messages;                // Array de imagenes que contendran los mensajes de seguridad
+    [SerializeField] private GameObject _securityCanvas;                // Canvas que contiene las imagenes
+    [SerializeField] private Sprite[] _bgContainer;                     // Array de imagenes que contendran los mensajes de seguridad
+    [SerializeField] private TMP_Text[] _messages;                      // Contenedor del mensaje
 
     private float _target;
 
@@ -23,11 +25,10 @@ public class LevelManager : MonoBehaviour
         _target = 0;                            
         _progressBar.fillAmount = 0;    // Esto es para reiniciar el estado de la barra de carga y que no comience al 100%
 
-        // _securityPopup.SetActive(false);     //Para que el popup de mensajes de advertencia no salga activo cada que se carga una nueva escena
-
         var scene = SceneManager.LoadSceneAsync(sceneName);
         scene.allowSceneActivation = false;
 
+        _securityCanvas.SetActive(false);
         _mainMenuCanvas.SetActive(false);
         _loaderCanvas.SetActive(true);
 
@@ -38,12 +39,29 @@ public class LevelManager : MonoBehaviour
         }
         while (scene.progress < 0.9f);  // NO TOCAR NI CAMBIAR PARAMETRO DE 0.9f
 
-        // Esto eso para hacer aparecer el popup y siempre cambiar el sprite
-        // _securityPopup.SetActive(true);
-        // _messageContainer.sprite = _messages[Random.Range(0,_messages.Length + 1)];      //siempre cambia el mensaje por uno aleatorio cada que se llama la pantalla de carga
-
-
         scene.allowSceneActivation = true;
+    }
+
+    // Esto eso para hacer aparecer el popup y siempre cambiar el sprite
+    public void CanvasSecurity() 
+    {
+        var ind = 0;
+        _securityCanvas.SetActive(true);     //Para que el popup de mensajes de advertencia no salga activo cada que se carga una nueva escena
+        _mainMenuCanvas.SetActive(false);
+        _loaderCanvas.SetActive(false);
+
+        ind = Random.Range(0, _messages.Length + 1);
+
+        _securityCanvas.GetComponent<Image>().sprite = _bgContainer[Random.Range(0, _bgContainer.Length + 1)];
+
+        for (int i = 0; i < _messages.Length; i++)
+        {
+            if (i == ind)
+                _messages[i].gameObject.SetActive(true);
+
+            else
+                _messages[i].gameObject.SetActive(false);
+        }
     }
 
     private void Update()

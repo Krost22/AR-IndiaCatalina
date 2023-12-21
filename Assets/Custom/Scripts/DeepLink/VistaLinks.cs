@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Networking;
 
 public class VistaLinks : MonoBehaviour
 {
     public GameManager gameManager;
-    public const string url = "https://lsvtech.github.io/Treasure-Trail-3DVista/index.htm?media-name=";
+    public string url;
+
     public void abrirLink()
     {
         GameObject monumento = gameManager.monumentoEscena;

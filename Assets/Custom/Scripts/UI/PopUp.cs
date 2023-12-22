@@ -8,118 +8,112 @@ using TMPro;
 public class PopUp : MonoBehaviour
 {
     public GameManager gameManager;
-   
-    public GameObject popUp;
+
+    public MeshPlacer meshPlacer;
 
     [SerializeField]
     private TextAsset[] _textosResources;
 
     [SerializeField]
-    private TextMeshProUGUI _textMeshContent;
+    private Sprite[] _imagenesResources;
 
     [SerializeField]
-    private TextMeshProUGUI _textMeshTitle;
+    private GameObject _popUpPrefab;
 
-    [SerializeField]
-    private Image _spriteMon;
+    public GameObject parentPopUp;
 
-    public Sprite[] images;
+    List<GameObject> instanciasPopUp = new List<GameObject>();
 
+    public GameObject panelPopUps;
+    GameObject[] listaMonumentos;
 
+    void Awake()
+    {
+        _textosResources = Resources.LoadAll<TextAsset>("Historias");
+        _imagenesResources = Resources.LoadAll<Sprite>("ImagenesMon");
+
+        listaMonumentos = meshPlacer.listaMonumentos;
+    }
     // Start is called before the first frame update
     void Start()
     {
-        _textosResources = Resources.LoadAll<TextAsset>("Historias");
+
+
+        foreach (var monumento in listaMonumentos)
+        {
+            GameObject popUp = Instantiate(_popUpPrefab, parentPopUp.transform);
+
+            popUp.transform.name = monumento.name;
+
+            TextMeshProUGUI contenidoTexto = popUp.transform.GetComponentInChildren<TextMeshProUGUI>();
+
+            Image imagenMonumento = buscarHijo(popUp, "ImagenMon").GetComponent<Image>();
+
+            Button botonCerrar = buscarHijo(popUp, "BotonSalir").GetComponent<Button>();
+
+
+             foreach (var texto in _textosResources)
+             {
+                 if(texto.name == monumento.name){
+
+                     contenidoTexto.text = texto.text;
+
+                 }
+             }
+
+             foreach (var imagen in _imagenesResources)
+             {
+
+                 if(imagen.name == monumento.name){
+
+                     imagenMonumento.sprite = imagen;
+
+                 }
+
+             }   
+
+
+            popUp.SetActive(false);
+
+            instanciasPopUp.Add(popUp);
+            
+        }
+        
+
     }
 
-    
+
     public void ChangePopUp()
+     {
+         GameObject monumentoActivo = gameManager.monumentoEscena;
+
+         foreach (var popUp in instanciasPopUp)
+         {
+             if (popUp.transform.name == monumentoActivo.name)
+             {
+                 popUp.SetActive(true);
+
+             } else popUp.SetActive(false);
+         }
+
+     }
+
+    Transform buscarHijo(GameObject parent, string nombreHijo)
     {
-        var monumentoActivo = gameManager.monumentoEscena;
-        
-        switch (monumentoActivo.name)
+
+        Transform[] hijos = parent.GetComponentsInChildren<Transform>();
+
+        foreach (var hijo in hijos)
         {
-            case "IndiaCatalina":
+            if (hijo.transform.name == nombreHijo)
+            {
 
-                foreach (var texto in _textosResources)
-                {
-                    if(texto.name == "IndiaCatalina")
-                    {
-                        _textMeshContent.text = texto.text;
-                        _textMeshTitle.text = "India Catalina";
-                        _spriteMon.sprite = images[0];
-                    }
-                }
+                return hijo;
+            }
 
-                break;
-
-            case "Pegasos":
-
-                foreach (var texto in _textosResources)
-                {
-                    if (texto.name == "Pegasos")
-                    {
-                        _textMeshContent.text = texto.text;
-                        _textMeshTitle.text = "Muelle de los Pegasos";
-                        _spriteMon.sprite = images[1];
-                    }
-                }
-
-                break;
-
-            case "Botas":
-
-                foreach (var texto in _textosResources)
-                {
-                    if (texto.name == "Botas")
-                    {
-                        _textMeshContent.text = texto.text;
-                        _textMeshTitle.text = "Los Zapatos Viejos";
-                        _spriteMon.sprite = images[2];
-                    }
-                }
-
-                break;
-
-            case "Castillo":
-
-                foreach (var texto in _textosResources)
-                {
-                    if (texto.name == "Castillo")
-                    {
-                        _textMeshContent.text = texto.text;
-                        _textMeshTitle.text = "El Castillo San Felipe";
-                        _spriteMon.sprite = images[3];
-                    }
-                }
-
-                break;
-
-            case "Torre":
-
-                foreach (var texto in _textosResources)
-                {
-                    if (texto.name == "Torre")
-                    {
-                        _textMeshContent.text = texto.text;
-                        _textMeshTitle.text = "La Torre del Reloj";
-                        _spriteMon.sprite = images[4];
-                    }
-                }
-
-                break;
-
-            default:
-
-                _textMeshContent.text = null;
-                _textMeshTitle.text = null;
-                _spriteMon = null;
-
-
-                break;
         }
-       
 
+        return null;
     }
 
 

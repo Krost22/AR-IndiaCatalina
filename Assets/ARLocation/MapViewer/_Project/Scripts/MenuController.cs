@@ -309,10 +309,9 @@ namespace ARLocation.MapboxRoutes.SampleProject
                                     return;
                                 }
 
-                                ARSession.SetActive(true);
-                                ARSessionOrigin.SetActive(true);
+                                
                                 RouteContainer.SetActive(true);
-                                Camera.gameObject.SetActive(false);
+                                
                                 s.View = View.Route;
 
                                 currentPathRenderer.enabled = true;

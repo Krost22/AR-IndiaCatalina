@@ -19,6 +19,7 @@ GameObject:
   - component: {fileID: 1235349982543907384}
   - component: {fileID: 7904744102227782530}
   - component: {fileID: 7910466246686138811}
+  - component: {fileID: 4555337322203974272}
   m_Layer: 0
   m_Name: Botas
   m_TagString: Estatua
@@ -352,6 +353,21 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &4555337322203974272
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1344096261268231877}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d692024f4635f324bb14b6a15b103947, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minLocalScale: {x: 0, y: 0, z: 0}
+  maxLocalScale: {x: 0, y: 0, z: 0}
+  scaleFactor: 5
 --- !u!1 &6061367300208088791
 GameObject:
   m_ObjectHideFlags: 0
@@ -451,10 +467,10 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 25
+  m_fontSize: 22
   m_fontSizeBase: 22
   m_fontWeight: 400
-  m_enableAutoSizing: 1
+  m_enableAutoSizing: 0
   m_fontSizeMin: 25
   m_fontSizeMax: 72
   m_fontStyle: 0
@@ -724,10 +740,10 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 25.1
+  m_fontSize: 22
   m_fontSizeBase: 22
   m_fontWeight: 400
-  m_enableAutoSizing: 1
+  m_enableAutoSizing: 0
   m_fontSizeMin: 25
   m_fontSizeMax: 72
   m_fontStyle: 0

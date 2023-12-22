@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class AnimTutorial : MonoBehaviour
 {
-    GameObject panelGestos;
+    //GameObject panelGestos;
+    public GameManager gameManager;
+
     GameObject gestoRotar;
     GameObject gestoEscalar;
     public float tiempoEspera = 5f;
@@ -13,28 +15,41 @@ public class AnimTutorial : MonoBehaviour
     {
         gestoRotar = GameObject.Find("Rotate_Gesto");
         gestoEscalar = GameObject.Find("Scale_Gesto");
-        panelGestos = GameObject.Find("PanelGestos");
+       // panelGestos = GameObject.Find("PanelGestos");
     }
     void Start()
     {
-        panelGestos.SetActive(true);
-        gestoRotar.SetActive(true);
+        gestoRotar.SetActive(false);
         gestoEscalar.SetActive(false);
-        
 
-        StartCoroutine(Waiter(tiempoEspera));
-
+        // StartCoroutine(Waiter(tiempoEspera));
     }
+
+    void Update()
+    {
+        if (gameManager.hayMonumentoActivo==true)
+        {
+            print(".a");
+            StartCoroutine(Waiter(tiempoEspera));
+        }
+    }
+
     IEnumerator Waiter(float seconds)
     {
-        //Inicia contador.
+        print(".b");
+        gestoRotar.SetActive(true);
         yield return new WaitForSeconds(seconds);
-        //Accion despues del contador.
+
+        print(".c");
         gestoRotar.SetActive(false);
+        Destroy(gestoRotar);
+        gestoEscalar.SetActive(true);
 
         yield return new WaitForSeconds(seconds);
+        print(".d");
         gestoEscalar.SetActive(false);
-        gestoRotar.SetActive(true);
+        Destroy(gestoEscalar);
+        print(".e");
     }
 
 }

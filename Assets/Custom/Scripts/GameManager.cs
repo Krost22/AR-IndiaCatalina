@@ -6,6 +6,12 @@ public class GameManager : MonoBehaviour
     int target = 60;
     public GameObject monumentoEscena;
 
+    public bool hayMonumentoActivo
+    {
+        get;
+        private set;
+    }
+
     void Awake()
     {
         QualitySettings.vSyncCount = 1;
@@ -31,10 +37,14 @@ public class GameManager : MonoBehaviour
 
         foreach (var monumento in listaMonumentos)
         {
-            if(monumento.activeSelf == true)
+            if (monumento.activeSelf == true)
             {
                 monumentoEscena = monumento;
+
+                hayMonumentoActivo = true;
             }
+            else hayMonumentoActivo = false;
         }
     }
+
 }

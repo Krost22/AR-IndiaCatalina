@@ -8,6 +8,7 @@ TagManager:
   - TextoLeft
   - TextoRight
   - ARPlane
+  - PopUp
   layers:
   - Default
   - TransparentFX
@@ -15,7 +16,7 @@ TagManager:
   - ARPlane
   - Water
   - UI
-  - 
+  - Map
   - 
   - 
   - 

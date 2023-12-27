@@ -4702,7 +4702,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cel_Gesto
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1097598882187388415, guid: 45abb5ad5b28ed74b8ebabc084978ebc, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 45abb5ad5b28ed74b8ebabc084978ebc, type: 3}
 --- !u!1 &3476603964186953257
 GameObject:

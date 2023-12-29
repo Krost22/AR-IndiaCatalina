@@ -5,26 +5,32 @@ using UnityEngine;
 public class FadeOutObjects : MonoBehaviour
 {
     public GameObject[] objectsToFade;
-    public GameObject[] audiosToFade;
+    //public GameObject[] audiosToFade;
 
-    public TimedAnimation timedAnimation;
+
 
     //public float waitTime;
     public float fadeTime;
 
-    private void Start()
+    //private void Start()
+    //{
+    //    StartCoroutine("fadeOut");
+    //}
+
+    //se agrega la funcion iiciar para activarla desde el timeline
+    public void IniciarFadeOut()
     {
-        StartCoroutine("fadeOut");
+        StartCoroutine(fadeOut());
     }
 
-    private void Update()
+    public void IniciarFadeIn()
     {
-
+        StartCoroutine(fadeIn());
     }
 
     IEnumerator fadeOut()
     {
-        yield return new WaitForSeconds(timedAnimation.timestamps[0]);
+        //yield return new WaitForSeconds(timedAnimation.timestamps[0]);
         SetMaterialTransparent();
 
         foreach (GameObject gObject in objectsToFade)
@@ -48,6 +54,33 @@ public class FadeOutObjects : MonoBehaviour
         }
     }
 
+    IEnumerator fadeIn()
+    {
+        //yield return new WaitForSeconds(timedAnimation.timestamps[0]);
+        SetMaterialTransparent();
+
+        foreach (GameObject gObject in objectsToFade)
+        {
+            if (gObject.name != "Base.002")
+                iTween.FadeTo(gObject, 1, 0);
+            else
+                iTween.FadeTo(gObject, 0, 0);
+        }
+
+        yield return new WaitForSeconds(0);
+
+        foreach (GameObject g in objectsToFade)
+        {
+            if (g.name != "Base.002")
+                g.SetActive(true);
+            else if (g.GetComponent<Terrain>() != null)
+            {
+                g.SetActive(true);
+            }
+        }
+    }
+
+
     void SetMaterialTransparent()
     {
         foreach (GameObject g in objectsToFade)
@@ -67,9 +100,9 @@ public class FadeOutObjects : MonoBehaviour
             }
         }
 
-        foreach (GameObject audio in audiosToFade)
-        {
-            iTween.AudioTo(audio, 0, 1, fadeTime);
-        }
+        //foreach (GameObject audio in audiosToFade)
+        //{
+        //    iTween.AudioTo(audio, 0, 1, fadeTime);
+        //}
     }
 }

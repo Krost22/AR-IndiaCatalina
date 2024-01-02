@@ -2384,7 +2384,6 @@ MonoBehaviour:
   - {fileID: 7412420314698063787}
   audiosToFade:
   - {fileID: 5314591962487410847}
-  timedAnimation: {fileID: 11400000, guid: fb56e7770bee6324f965687631aef7ca, type: 2}
   fadeTime: 5
 --- !u!114 &235515843856594396
 MonoBehaviour:
@@ -3366,7 +3365,6 @@ MonoBehaviour:
   - {fileID: 8300000, guid: c3256f9c11f17454ab88055a220986d4, type: 3}
   - {fileID: 8300000, guid: 2d4d457413983544aa954542ea69f5f6, type: 3}
   soundManager: {fileID: 0}
-  hoja: {fileID: 0}
 --- !u!1 &4052597784360444945
 GameObject:
   m_ObjectHideFlags: 0
@@ -3476,7 +3474,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4227289074942164492}
   m_LocalRotation: {x: 0.000000021855694, y: 0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: -9.75, z: 46.6666}
+  m_LocalPosition: {x: -0.3, y: -9.75, z: 46.7}
   m_LocalScale: {x: 1, y: 4, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3702,7 +3700,6 @@ MonoBehaviour:
   - {fileID: 8300000, guid: c3256f9c11f17454ab88055a220986d4, type: 3}
   - {fileID: 8300000, guid: 2d4d457413983544aa954542ea69f5f6, type: 3}
   soundManager: {fileID: 0}
-  hoja: {fileID: 123481275062107405}
 --- !u!1 &4877969629550161704
 GameObject:
   m_ObjectHideFlags: 0

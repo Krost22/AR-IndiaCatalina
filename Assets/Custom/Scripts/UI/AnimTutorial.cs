@@ -29,27 +29,22 @@ public class AnimTutorial : MonoBehaviour
     {
         if (gameManager.hayMonumentoActivo==true)
         {
-            print(".a");
             StartCoroutine(Waiter(tiempoEspera));
         }
     }
 
     IEnumerator Waiter(float seconds)
     {
-        print(".b");
         gestoRotar.SetActive(true);
         yield return new WaitForSeconds(seconds);
 
-        print(".c");
         gestoRotar.SetActive(false);
         Destroy(gestoRotar);
         gestoEscalar.SetActive(true);
 
         yield return new WaitForSeconds(seconds);
-        print(".d");
         gestoEscalar.SetActive(false);
         Destroy(gestoEscalar);
-        print(".e");
     }
 
 }

@@ -44,6 +44,11 @@ public class RouteMaker : MonoBehaviour
 
         string apiError;
 
+        public int mapZoom {
+            get;
+            private set;
+            }
+
         public LineType PathRendererType
         {
             get => PathRendererType;
@@ -61,6 +66,10 @@ public class RouteMaker : MonoBehaviour
         }
 
 
+        void OnGUI()
+        {
+            drawMap();
+        }
 
         void Start()
         {
@@ -70,6 +79,8 @@ public class RouteMaker : MonoBehaviour
             RoutePathRenderer.enabled = false;
             ARLocationProvider.Instance.OnEnabled.AddListener(onLocationEnabled);
             Map.OnUpdated += OnMapRedrawn;
+
+            mapZoom = 10;
         }
 
         private void OnMapRedrawn()
@@ -106,17 +117,18 @@ public class RouteMaker : MonoBehaviour
                 border = 0;
             }
 
+             Map.UpdateMap();
 
-            GUI.DrawTexture(new Rect(x, Screen.height - MapSize, newWidth, MapSize), RenderTexture, ScaleMode.ScaleAndCrop);
+            // GUI.DrawTexture(new Rect(x, Screen.height - MapSize, newWidth, MapSize), RenderTexture, ScaleMode.ScaleAndCrop);
 
-            var newZoom = GUI.HorizontalSlider(new Rect(0, Screen.height - 60, Screen.width, 60), Map.Zoom, 10, 22);
+            // var newZoom = GUI.HorizontalSlider(new Rect(0, Screen.height - 60, Screen.width, 60), Map.Zoom, 10, 22);
 
-            if (newZoom != Map.Zoom)
-            {
-                Map.SetZoom(newZoom);
-                Map.UpdateMap();
-                // buildMinimapRoute(currentResponse);
-            }
+            // if (newZoom != Map.Zoom)
+            // {
+            //     Map.SetZoom(newZoom);
+            //     Map.UpdateMap();
+            //     // buildMinimapRoute(currentResponse);
+            // }
         }
 
         
@@ -291,6 +303,32 @@ public class RouteMaker : MonoBehaviour
         void SetLocationLatLong(ARLocation.Location location, double latitude, double longitude){
             location.Latitude = latitude;
             location.Longitude = longitude;
+        }
+
+        public void setMapZoom(string option){
+            switch (option)
+            {
+                case "increase":
+
+                if(mapZoom < 22) mapZoom++;
+                
+                break;
+
+                case "decrease":
+
+                if(mapZoom > 10) mapZoom--;
+
+                break;
+                
+                default:
+
+                Map.UpdateMap();
+
+                break;
+            }
+
+            Map.SetZoom(mapZoom);
+            Map.UpdateMap();
         }
     }
     

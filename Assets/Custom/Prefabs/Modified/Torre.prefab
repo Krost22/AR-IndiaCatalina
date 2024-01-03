@@ -2382,8 +2382,6 @@ MonoBehaviour:
   - {fileID: 3850472649100631250}
   - {fileID: 4227289074942164492}
   - {fileID: 7412420314698063787}
-  audiosToFade:
-  - {fileID: 5314591962487410847}
   fadeTime: 5
 --- !u!114 &235515843856594396
 MonoBehaviour:
@@ -3719,7 +3717,6 @@ GameObject:
   - component: {fileID: -6376441189524835335}
   - component: {fileID: 6183056846699542693}
   - component: {fileID: 2881850471998196733}
-  - component: {fileID: 1753288431543404945}
   m_Layer: 0
   m_Name: Torre
   m_TagString: Estatua
@@ -4053,22 +4050,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &1753288431543404945
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4877969629550161704}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7fec7be24ab6afc41bc64d7dff7d8d58, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  audio: {fileID: 2881850471998196733}
-  animators:
-  - {fileID: 6702480332800535822}
-  timedAnimation: {fileID: 11400000, guid: fb56e7770bee6324f965687631aef7ca, type: 2}
 --- !u!1 &5190049804137100185
 GameObject:
   m_ObjectHideFlags: 0

@@ -101,8 +101,9 @@ GameObject:
   - component: {fileID: 1805189194811545027}
   - component: {fileID: -6235079356595424445}
   - component: {fileID: -7345671017188104419}
-  - component: {fileID: 76275216908269506}
   - component: {fileID: 8162367388479347878}
+  - component: {fileID: 922516307443406835}
+  - component: {fileID: 7694101156718763284}
   m_Layer: 0
   m_Name: Pegasos
   m_TagString: Estatua
@@ -342,25 +343,6 @@ MonoBehaviour:
   onScreen:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &76275216908269506
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 132159588432119641}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7fec7be24ab6afc41bc64d7dff7d8d58, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  audio: {fileID: 8162367388479347878}
-  animators:
-  - {fileID: 1605161046924001467}
-  - {fileID: 5049418598459460962}
-  - {fileID: 4469705187131471317}
-  - {fileID: 7201595164928411876}
-  timedAnimation: {fileID: 11400000, guid: e3dedeae451ce1949962a560f66c57d9, type: 2}
 --- !u!82 &8162367388479347878
 AudioSource:
   m_ObjectHideFlags: 0
@@ -457,6 +439,82 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &922516307443406835
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 132159588432119641}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2b29544581cbff48a74923442363fb0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  requiredAngle: 270
+  requiredArc: -1
+  onFinger:
+    m_PersistentCalls:
+      m_Calls: []
+  modify: 0
+  coordinate: 0
+  multiplier: 1
+  onDelta:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7694101156718763284}
+        m_TargetAssemblyTypeName: SwipeRotate, Assembly-CSharp
+        m_MethodName: rotateObject
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onDistance:
+    m_PersistentCalls:
+      m_Calls: []
+  ScreenDepth:
+    Conversion: 1
+    Camera: {fileID: 0}
+    Object: {fileID: 0}
+    Layers:
+      serializedVersion: 2
+      m_Bits: 4294967291
+    Distance: 10
+  onWorldFrom:
+    m_PersistentCalls:
+      m_Calls: []
+  onWorldTo:
+    m_PersistentCalls:
+      m_Calls: []
+  onWorldDelta:
+    m_PersistentCalls:
+      m_Calls: []
+  onWorldFromTo:
+    m_PersistentCalls:
+      m_Calls: []
+  ignoreStartedOverGui: 1
+  ignoreIsOverGui: 1
+  requiredSelectable: {fileID: 3411348063223556943}
+--- !u!114 &7694101156718763284
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 132159588432119641}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1009129affabdec489b511b7c1dbe628, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  axis: {x: 0, y: -1, z: 0}
+  space: 1
+  sensitivity: 1
 --- !u!1 &430378585512403751
 GameObject:
   m_ObjectHideFlags: 0
@@ -1689,9 +1747,6 @@ MonoBehaviour:
   - {fileID: 6623543317538778604}
   - {fileID: 0}
   - {fileID: 9221139166250560227}
-  audiosToFade:
-  - {fileID: 2184057067464642416}
-  timedAnimation: {fileID: 0}
   fadeTime: 5
 --- !u!1 &6278260815515916438
 GameObject:

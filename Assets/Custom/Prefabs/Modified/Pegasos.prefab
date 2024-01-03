@@ -103,7 +103,6 @@ GameObject:
   - component: {fileID: -7345671017188104419}
   - component: {fileID: 8162367388479347878}
   - component: {fileID: 922516307443406835}
-  - component: {fileID: 7694101156718763284}
   m_Layer: 0
   m_Name: Pegasos
   m_TagString: Estatua
@@ -186,7 +185,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 132159588432119641}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7c73c1ab94e28d244827af556dca1ed2, type: 3}
   m_Name: 
@@ -255,7 +254,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 132159588432119641}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dc7c91b26689a054d88448aba6dfe424, type: 3}
   m_Name: 
@@ -446,7 +445,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 132159588432119641}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a2b29544581cbff48a74923442363fb0, type: 3}
   m_Name: 
@@ -462,7 +461,7 @@ MonoBehaviour:
   onDelta:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7694101156718763284}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: SwipeRotate, Assembly-CSharp
         m_MethodName: rotateObject
         m_Mode: 0
@@ -500,21 +499,6 @@ MonoBehaviour:
   ignoreStartedOverGui: 1
   ignoreIsOverGui: 1
   requiredSelectable: {fileID: 3411348063223556943}
---- !u!114 &7694101156718763284
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 132159588432119641}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1009129affabdec489b511b7c1dbe628, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  axis: {x: 0, y: -1, z: 0}
-  space: 1
-  sensitivity: 1
 --- !u!1 &430378585512403751
 GameObject:
   m_ObjectHideFlags: 0

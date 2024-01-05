@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -209,7 +209,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 30.8
+  m_fontSize: 77.8
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1808,7 +1808,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1457021958}
   m_HandleRect: {fileID: 1457021957}
   m_Direction: 2
-  m_Value: 1
+  m_Value: 0
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -2859,7 +2859,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1354141925}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -0.751}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4506,7 +4506,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 21.6
+  m_fontSize: 54.5
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -10848,9 +10848,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1095469846673423785}
-  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: -1, y: 0, z: 0}
-  m_LocalScale: {x: 0.006, y: 0.006, z: 0.006}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.21499999, z: 0}
+  m_LocalScale: {x: 0.01, y: 0.01, z: 0.01}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8034917045639216796}
@@ -10860,7 +10860,7 @@ Transform:
   - {fileID: 4961881441118872265}
   m_Father: {fileID: 0}
   m_RootOrder: 11
-  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &324471846643934588
 AudioSource:
   m_ObjectHideFlags: 0
@@ -17551,7 +17551,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8107447086129926908}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.125, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -17673,6 +17673,7 @@ GameObject:
   - component: {fileID: 6336152441161035548}
   - component: {fileID: 6245524980210018389}
   - component: {fileID: 6645757238554689038}
+  - component: {fileID: 8388691889414575727}
   - component: {fileID: 8388691889414575725}
   - component: {fileID: 8388691889414575726}
   m_Layer: 0
@@ -33714,6 +33715,7 @@ GameObject:
   - component: {fileID: 3671148123898225222}
   - component: {fileID: 182210631755367622}
   - component: {fileID: 3598715741710897304}
+  - component: {fileID: 9142447408120846756}
   - component: {fileID: 6537351039398275875}
   - component: {fileID: 9142447408120846755}
   m_Layer: 0
@@ -40049,7 +40051,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8102903435205739857}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.125, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -74447,6 +74449,7 @@ GameObject:
   - component: {fileID: 3334793315004415220}
   - component: {fileID: 5325065170008324434}
   - component: {fileID: 1568287287268972793}
+  - component: {fileID: 8102903435205739859}
   - component: {fileID: 8102903435205739858}
   m_Layer: 0
   m_Name: Castillo
@@ -74480,6 +74483,21 @@ PlayableDirector:
     value: {fileID: 8511567548106849452}
   m_ExposedReferences:
     m_References: []
+--- !u!114 &8102903435205739859
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8102903435205739857}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d692024f4635f324bb14b6a15b103947, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minLocalScale: {x: 0, y: 0, z: 0}
+  maxLocalScale: {x: 0, y: 0, z: 0}
+  scaleFactor: 5
 --- !u!23 &8107189760489119423
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -74540,6 +74558,7 @@ GameObject:
   - component: {fileID: 5385946635098315579}
   - component: {fileID: 1491574549739998765}
   - component: {fileID: 7421886911513707889}
+  - component: {fileID: 8107447086129926910}
   - component: {fileID: 1499439327154370089}
   - component: {fileID: 8107447086129926909}
   m_Layer: 0
@@ -74577,6 +74596,21 @@ PlayableDirector:
   m_ExposedReferences:
     m_References:
     - fd8be4de4d57c524f9aee4ecf56c00d1: {fileID: 459041546117308678}
+--- !u!114 &8107447086129926910
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8107447086129926908}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d692024f4635f324bb14b6a15b103947, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minLocalScale: {x: 0, y: 0, z: 0}
+  maxLocalScale: {x: 0, y: 0, z: 0}
+  scaleFactor: 5
 --- !u!4 &8115239741085013141
 Transform:
   m_ObjectHideFlags: 0
@@ -75157,6 +75191,21 @@ MonoBehaviour:
         m_Calls: []
     - m_PersistentCalls:
         m_Calls: []
+--- !u!114 &8388691889414575727
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1095469846673423785}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d692024f4635f324bb14b6a15b103947, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minLocalScale: {x: 0, y: 0, z: 0}
+  maxLocalScale: {x: 0, y: 0, z: 0}
+  scaleFactor: 5
 --- !u!33 &8393914414060670089
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -77051,6 +77100,21 @@ PlayableDirector:
     value: {fileID: 9204979000975347641}
   m_ExposedReferences:
     m_References: []
+--- !u!114 &9142447408120846756
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3038343928672596188}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d692024f4635f324bb14b6a15b103947, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minLocalScale: {x: 0, y: 0, z: 0}
+  maxLocalScale: {x: 0, y: 0, z: 0}
+  scaleFactor: 5
 --- !u!23 &9155211148729412704
 MeshRenderer:
   m_ObjectHideFlags: 0

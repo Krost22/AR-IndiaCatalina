@@ -36,4 +36,15 @@ public class ScaleClamp : MonoBehaviour
         
         transform.localScale = newScale;
     }
+
+    public void OnEnable()
+    {
+        // Get the direction to the camera (ignoring the Y component)
+        Vector3 directionToCamera = Camera.allCameras[0].transform.position - transform.position;
+        directionToCamera.y = 0; // Set Y component to 0
+
+        // Rotate the transform to face the camera on the Y-axis only
+        transform.rotation = Quaternion.LookRotation(directionToCamera, Vector3.up);
+    }
+
 }

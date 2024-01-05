@@ -41,6 +41,8 @@ public class TextAnim : MonoBehaviour
         print(".0");
         i = 0;
         EndCheck();
+
+        soundManager = GameObject.Find("SoundManager").GetComponent<SoundManager>();
     }
 
     public void EndCheck() 

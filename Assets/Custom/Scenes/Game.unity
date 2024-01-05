@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -209,7 +209,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 77.8
+  m_fontSize: 71.9
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -3186,11 +3186,11 @@ MonoBehaviour:
     m_Bits: 8
   dropdown: {fileID: 0}
   listaMonumentos:
-  - {fileID: 1344096261268231877, guid: 1e0cbf1758d9c8f4a9b661542681bdfd, type: 3}
-  - {fileID: 6805961130293345741, guid: 44676f98b353631418c3c60d5eefcf26, type: 3}
-  - {fileID: 4964035271951538544, guid: adff53d0632929a45bfeccef6d24362d, type: 3}
-  - {fileID: 132159588432119641, guid: efee21b387caee349963dbb8b543e103, type: 3}
-  - {fileID: 4877969629550161704, guid: aa5fb4b7367a26b44b48654f35f04b6b, type: 3}
+  - {fileID: 7349759469429047818, guid: 940ec04443290824a841a210cc3ab2c4, type: 3}
+  - {fileID: 7575654679384325163, guid: d3f72a7382fd9b2488d249b53e7e4bc2, type: 3}
+  - {fileID: 1245045730460290767, guid: e5e242f26891e9a4793e9378cf772602, type: 3}
+  - {fileID: 3727561630587922677, guid: 3d18f286d1dea95478f414d992843dea, type: 3}
+  - {fileID: 5374897984601610185, guid: 68c3048f16a7ccd4ca7b567b9c26fa93, type: 3}
   monumentoElegido: {fileID: 0}
   MonumentInScene: 0
 --- !u!114 &1659859603
@@ -3982,7 +3982,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 54.5
+  m_fontSize: 50.35
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1

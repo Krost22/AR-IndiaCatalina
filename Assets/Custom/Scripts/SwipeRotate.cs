@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using Lean.Touch;
-using UnityEditor.U2D.Animation;
 using UnityEngine;
 using UnityEngine.InputSystem.EnhancedTouch;
 

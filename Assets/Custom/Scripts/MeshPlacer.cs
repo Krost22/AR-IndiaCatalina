@@ -16,7 +16,6 @@ public class MeshPlacer : MonoBehaviour
     //se referencia al mismo script para que este sea capaz de desactivarse solo
     private MeshPlacer meshPlacer;
 
-    [HideInInspector]
     public GameObject[] listaMonumentos = new GameObject[5];
 
 
@@ -32,7 +31,7 @@ public class MeshPlacer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        camera = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>(); 
+        camera = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
     }
 
     // Update is called once per frame

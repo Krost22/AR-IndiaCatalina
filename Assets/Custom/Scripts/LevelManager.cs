@@ -50,7 +50,7 @@ public class LevelManager : MonoBehaviour
         _mainMenuCanvas.SetActive(false);
         _loaderCanvas.SetActive(false);
 
-        ind = Random.Range(0, _messages.Length + 1);
+        ind = Random.Range(0, _messages.Length);
 
         _securityCanvas.GetComponent<Image>().sprite = _bgContainer[Random.Range(0, _bgContainer.Length + 1)];
 

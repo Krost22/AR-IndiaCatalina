@@ -7,8 +7,8 @@ using UnityEngine.XR.ARFoundation;
 [RequireComponent(typeof(ARTrackedImageManager))]
 public class TrackedImageSolver : MonoBehaviour
 {
-    [SerializeField]
-    private GameObject[] placeablePrefabs;
+    
+    public GameObject[] placeablePrefabs;
 
     private Dictionary<string, GameObject> spawnedPrefabs = new Dictionary<string, GameObject>();
     private ARTrackedImageManager _arManager;

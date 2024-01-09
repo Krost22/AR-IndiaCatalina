@@ -24,7 +24,6 @@ public class PopUp : MonoBehaviour
 
     List<GameObject> instanciasPopUp = new List<GameObject>();
 
-    public GameObject panelPopUps;
     GameObject[] listaMonumentos;
 
     void Awake()

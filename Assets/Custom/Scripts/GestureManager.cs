@@ -10,6 +10,8 @@ public class GestureManager : MonoBehaviour
 	public Space Space { set { space = value; } get { return space; } } [SerializeField] private Space space = Space.Self;
 	public float Sensitivity { set { sensitivity = value; } get { return sensitivity; } } [SerializeField] private float sensitivity = 1.0f;
 
+    public LeanPinchScale leanPinchScale;
+
     GameObject target;
     public GameManager gameManager;
 
@@ -18,31 +20,42 @@ public class GestureManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        gameManager = GetComponentInParent<GameManager>(); 
+        gameManager = GetComponentInParent<GameManager>();
+        leanPinchScale = this.GetComponent<LeanPinchScale>(); 
     }
 
     // Update is called once per frame
     void Update()
     {
-       target = gameManager.monumentoEscena;
+        if(gameManager.monumentoEscena != null)
+        {
+            target = gameManager.monumentoEscena;
 
-       var finger = Use.UpdateAndGetFingers()[0];
+            leanPinchScale.Use.RequiredSelectable = target.GetComponent<LeanSelectableByFinger>();
 
-       if (finger != null){
+            var finger = Use.UpdateAndGetFingers()[0];
 
-        if(!finger.IsActive){
+            if (finger != null)
+            {
 
-            swipeDelta = Vector2.zero;
+                if (!finger.IsActive)
+                {
 
-        }else{
+                    swipeDelta = Vector2.zero;
 
-            swipeDelta = finger.SwipeScreenDelta;
+                }
+                else
+                {
 
-            rotarMonumento(swipeDelta);
+                    swipeDelta = finger.SwipeScreenDelta;
+
+                    rotarMonumento(swipeDelta);
+                }
+
+
+            }
         }
-        
-        
-       }
+       
     }
 
     public void checkSwipe(){

@@ -41,13 +41,13 @@ public class RouteMaker : MonoBehaviour
         private AbstractRouteRenderer currentPathRenderer => PathRendererType == LineType.Route ? RoutePathRenderer : NextTargetPathRenderer;
 
         private GameManager gameManager;
-
+    
         string apiError;
 
-        public int mapZoom {
-            get;
-            private set;
-            }
+       
+        public int mapZoom;
+           
+            
 
         public LineType PathRendererType
         {

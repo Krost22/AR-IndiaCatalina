@@ -17,29 +17,31 @@ public class PopUp : MonoBehaviour
     [SerializeField]
     private Sprite[] _imagenesResources;
 
-    [SerializeField]
-    private GameObject _popUpPrefab;
+    
+    public GameObject _popUpPrefab;
 
     public GameObject parentPopUp;
 
-    List<GameObject> instanciasPopUp = new List<GameObject>();
+    public List<GameObject> instanciasPopUp = new List<GameObject>();
 
-    GameObject[] listaMonumentos;
+    public GameObject[] listaMonumentos;
 
     void Awake()
     {
-        _textosResources = Resources.LoadAll<TextAsset>("Historias");
-        _imagenesResources = Resources.LoadAll<Sprite>("ImagenesMon");
-
-        listaMonumentos = meshPlacer.listaMonumentos;
+        
     }
     // Start is called before the first frame update
     void Start()
     {
+        _textosResources = Resources.LoadAll<TextAsset>("Historias");
+        if (_textosResources != null) print("Documentos cargados");
+        _imagenesResources = Resources.LoadAll<Sprite>("ImagenesMon");
 
+        listaMonumentos = meshPlacer.listaMonumentos;
 
         foreach (var monumento in listaMonumentos)
         {
+            
             GameObject popUp = Instantiate(_popUpPrefab, parentPopUp.transform);
 
             popUp.transform.name = monumento.name;
@@ -57,7 +59,9 @@ public class PopUp : MonoBehaviour
 
                      contenidoTexto.text = texto.text;
 
-                 }
+                    print("TEXTO DE ASSET" + texto.text);
+
+                }
              }
 
              foreach (var imagen in _imagenesResources)
@@ -81,18 +85,22 @@ public class PopUp : MonoBehaviour
 
     }
 
-
     public void ChangePopUp()
      {
+        
+
          GameObject monumentoActivo = gameManager.monumentoEscena;
 
          foreach (var popUp in instanciasPopUp)
          {
+            print(popUp.transform.name);
+
              if (popUp.transform.name == monumentoActivo.name)
              {
                  popUp.SetActive(true);
+                print("popUp Cambiado");
 
-             } else popUp.SetActive(false);
+            } else popUp.SetActive(false);
          }
 
      }

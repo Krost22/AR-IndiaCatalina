@@ -205,7 +205,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 41249402}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Route
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -382,7 +382,7 @@ GameObject:
   - component: {fileID: 331317802}
   - component: {fileID: 331317804}
   - component: {fileID: 331317803}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Mapbox Route
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -420,7 +420,7 @@ MonoBehaviour:
           Label: 
         Query: 
       To:
-        Type: 1
+        Type: 0
         Location:
           Latitude: 0
           Longitude: 0
@@ -1044,7 +1044,7 @@ GameObject:
   - component: {fileID: 608842207}
   - component: {fileID: 608842206}
   - component: {fileID: 608842205}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: MapContainer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1105,6 +1105,7 @@ MonoBehaviour:
   MinimapLineMaterial: {fileID: 2100000, guid: 5a66f28d8726243dba9094b33505fec6, type: 2}
   BaseLineWidth: 2
   MinimapStepSize: 0.5
+  mapZoom: 15
 --- !u!4 &608842208
 Transform:
   m_ObjectHideFlags: 0
@@ -1278,16 +1279,16 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 970857784}
-        m_TargetAssemblyTypeName: PopUp, Assembly-CSharp
-        m_MethodName: ChangePopUp
-        m_Mode: 1
+      - m_Target: {fileID: 970857779}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SendMessage
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: ChangePopUp
           m_BoolArgument: 1
         m_CallState: 2
 --- !u!114 &709848355
@@ -2469,7 +2470,7 @@ Camera:
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 63
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -4176,13 +4177,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Use:
     Filter: 0
-    IgnoreStartedOverGui: 1
+    IgnoreStartedOverGui: 0
     RequiredFingerCount: 0
     RequiredMouseButtons: 0
     RequiredSelectable: {fileID: 0}
   axis: {x: 0, y: -1, z: 0}
   space: 1
   sensitivity: 1
+  leanPinchScale: {fileID: 0}
   gameManager: {fileID: 970857780}
 --- !u!114 &1740604683
 MonoBehaviour:
@@ -4198,7 +4200,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Use:
     Filter: 0
-    IgnoreStartedOverGui: 1
+    IgnoreStartedOverGui: 0
     RequiredFingerCount: 2
     RequiredMouseButtons: 0
     RequiredSelectable: {fileID: 0}
@@ -4265,8 +4267,8 @@ MonoBehaviour:
   onWorldFromTo:
     m_PersistentCalls:
       m_Calls: []
-  ignoreStartedOverGui: 1
-  ignoreIsOverGui: 1
+  ignoreStartedOverGui: 0
+  ignoreIsOverGui: 0
   requiredSelectable: {fileID: 0}
 --- !u!1 &1890183175
 GameObject:

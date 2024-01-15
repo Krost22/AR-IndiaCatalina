@@ -1,50 +1,136 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class AnimTutorial : MonoBehaviour
 {
-    //GameObject panelGestos;
+    public GameObject panelTutorial;
     public GameManager gameManager;
 
+    public GameObject[] arrayGestos = new GameObject[3];
     GameObject gestoRotar;
     GameObject gestoEscalar;
-    public float tiempoEspera = 5f;
 
+    public Button botonDerecho;
+    public Button botonIzquierdo;
+    public int posicionActual;
+
+    //public float tiempoEspera = 5f;
     private void Awake()
     {
-        gestoRotar = GameObject.Find("Rotate_Gesto");
-        gestoEscalar = GameObject.Find("Scale_Gesto");
-       // panelGestos = GameObject.Find("PanelGestos");
+        posicionActual = 0;
+
+        foreach (GameObject gesto in arrayGestos)
+        {
+            if (gesto != arrayGestos[posicionActual])
+            {
+                gesto.SetActive(false);
+            }
+        }
     }
     void Start()
     {
-        gestoRotar.SetActive(false);
-        gestoEscalar.SetActive(false);
+        botonDerecho.onClick.AddListener(delegate { 
 
+            SubirIndice();
+            ActualizarInfo();
+
+        });
+
+        botonIzquierdo.onClick.AddListener(delegate { 
+
+            BajarIndice();
+            ActualizarInfo();
+
+        });
+
+        
         // StartCoroutine(Waiter(tiempoEspera));
     }
 
     void Update()
+    {   
+
+        
+        //if (gameManager.hayMonumentoActivo==true)
+        //{
+        //    StartCoroutine(Waiter(tiempoEspera));
+        //}
+
+
+    }
+
+    //IEnumerator Waiter(float seconds)
+    //{
+    //    gestoRotar.SetActive(true);
+    //    yield return new WaitForSeconds(seconds);
+
+    //    gestoRotar.SetActive(false);
+    //    Destroy(gestoRotar);
+    //    gestoEscalar.SetActive(true);
+
+    //    yield return new WaitForSeconds(seconds);
+    //    gestoEscalar.SetActive(false);
+    //    Destroy(gestoEscalar);
+    //}
+
+    public void SubirIndice()
     {
-        if (gameManager.hayMonumentoActivo==true)
+        if (posicionActual >= 0 && posicionActual <=2)
         {
-            StartCoroutine(Waiter(tiempoEspera));
+            posicionActual += 1;
         }
     }
 
-    IEnumerator Waiter(float seconds)
+    public void BajarIndice()
     {
-        gestoRotar.SetActive(true);
-        yield return new WaitForSeconds(seconds);
+        if (posicionActual >= 0 && posicionActual <= 2)
+        {
+            posicionActual -= 1;
+        }
+    }
 
-        gestoRotar.SetActive(false);
-        Destroy(gestoRotar);
-        gestoEscalar.SetActive(true);
+    public void ReiniciarIndice()
+    {
+        posicionActual = 0;
+    }
 
-        yield return new WaitForSeconds(seconds);
-        gestoEscalar.SetActive(false);
-        Destroy(gestoEscalar);
+    public void ActualizarInfo()
+    {
+        foreach (GameObject gesto in arrayGestos)
+        {
+            if (gesto != arrayGestos[posicionActual])
+            {
+                gesto.SetActive(false);
+            }
+            else gesto.SetActive(true);
+        }
+
+
+        switch (posicionActual)
+        {
+            case 0:
+                //TODO: Activar solamente el boton derecho y desactivar izquierdo;
+                botonDerecho.gameObject.SetActive(true);
+                botonIzquierdo.gameObject.SetActive(false);
+                break;
+
+            case 1:
+                //TODO: Activar ambos botones
+                botonDerecho.gameObject.SetActive(true);
+                botonIzquierdo.gameObject.SetActive(true);
+                break;
+
+            case 2:
+                //TODO: Activar solamente el boton izquierdo y desactivar derecho;
+                botonDerecho.gameObject.SetActive(false);
+                botonIzquierdo.gameObject.SetActive(true);
+                break;
+
+            default:
+                break;
+        }
     }
 
 }

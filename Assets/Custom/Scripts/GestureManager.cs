@@ -11,7 +11,6 @@ public class GestureManager : MonoBehaviour
 	public float Sensitivity { set { sensitivity = value; } get { return sensitivity; } } [SerializeField] private float sensitivity = 1.0f;
 
     public LeanPinchScale leanPinchScale;
-
     GameObject target;
     public GameManager gameManager;
 
@@ -33,42 +32,49 @@ public class GestureManager : MonoBehaviour
 
             leanPinchScale.Use.RequiredSelectable = target.GetComponent<LeanSelectableByFinger>();
 
-            var finger = Use.UpdateAndGetFingers()[0];
+            int fingersActive = Use.UpdateAndGetFingers(true).Count;
 
-            if (finger != null)
+            print(fingersActive);
+
+            if(fingersActive == 1)
             {
+                leanPinchScale.enabled = false;
+                var finger = Use.UpdateAndGetFingers()[0];
 
-                if (!finger.IsActive)
+                if (finger != null)
                 {
 
-                    swipeDelta = Vector2.zero;
+                    if (!finger.IsActive)
+                    {
+
+                        swipeDelta = Vector2.zero;
+
+                    }
+                    else
+                    {
+
+                        swipeDelta = finger.SwipeScreenDelta;
+
+                        RotarMonumento(swipeDelta);
+                    }
+
 
                 }
-                else
-                {
-
-                    swipeDelta = finger.SwipeScreenDelta;
-
-                    rotarMonumento(swipeDelta);
-                }
-
 
             }
+            else if(fingersActive > 1)
+            {
+                leanPinchScale.enabled = true;
+            }
+
+            
         }
        
     }
 
-    public void checkSwipe(){
+   
 
-        print("Swipe");
-    }
-
-    public void checkScale(){
-
-        print("Scale");
-    }
-
-    public void rotarMonumento(Vector2 amount){
+    public void RotarMonumento(Vector2 amount){
 
         target.transform.Rotate(axis, amount.x * 0.01f, space);
     }

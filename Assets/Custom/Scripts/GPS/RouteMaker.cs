@@ -7,7 +7,6 @@ using Mapbox.Directions;
 using Mapbox.Unity.MeshGeneration.Factories;
 using System.Collections.Generic;
 using Mapbox.Unity;
-using Unity.VectorGraphics;
 using UnityEngine.SceneManagement;
 using ARLocation.MapboxRoutes;
 using ARLocation;

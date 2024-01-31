@@ -31,8 +31,12 @@ public class MonumentoUI : MonoBehaviour
     [SerializeField]
     private List<Sprite> imagesButtons;
 
+    //Este es el encargado de dar la ruta para el RouteMaker
+    private RouteMaker routeMaker;
+
     private void Awake()
     {
+        routeMaker = GameObject.FindAnyObjectByType<RouteMaker>();
         //Aqui guardamos los sprites que cargamos
         Object[] resources;
 
@@ -88,6 +92,9 @@ public class MonumentoUI : MonoBehaviour
             //A�adimos los eventos en cada boton
             buttonComponent.onClick.AddListener(delegate { SendPrefab(monumento, messageReceiver); });
             buttonComponent.onClick.AddListener(delegate { LimpiarEstatuas(); });
+            buttonComponent.onClick.AddListener(delegate { routeMaker.makeRoute(monumento.name);
+                print(routeMaker.location);
+            });
 
 
         }

@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -27,6 +28,7 @@ public class GameManager : MonoBehaviour
     private void Update()
     {
         obtenerMonumentoActivo();
+        if (monumentoEscena) ChangePopUp();
     }
 
     public void obtenerMonumentoActivo()
@@ -45,6 +47,23 @@ public class GameManager : MonoBehaviour
             }
             else hayMonumentoActivo = false;
         }
+    }
+
+    public void ChangePopUp()
+    {
+        GameObject[] popUps = new GameObject[5];
+        popUps = GameObject.FindGameObjectsWithTag("PopUp");
+
+        foreach (var popUp in popUps)
+        {
+            if (popUp.transform.name == monumentoEscena.name)
+            {
+                popUp.SetActive(true);
+
+            }
+            else popUp.SetActive(false);
+        }
+
     }
 
 }

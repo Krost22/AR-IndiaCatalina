@@ -527,7 +527,7 @@ GameObject:
   - component: {fileID: 3963886053896872199}
   m_Layer: 5
   m_Name: PanelPergamino
-  m_TagString: PopUp
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

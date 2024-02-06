@@ -28,7 +28,7 @@ public class GameManager : MonoBehaviour
     private void Update()
     {
         obtenerMonumentoActivo();
-        if (monumentoEscena) ChangePopUp();
+       // if (monumentoEscena) ChangePopUp();
     }
 
     public void obtenerMonumentoActivo()

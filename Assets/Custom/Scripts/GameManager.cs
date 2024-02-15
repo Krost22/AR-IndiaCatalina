@@ -28,6 +28,8 @@ public class GameManager : MonoBehaviour
     private void Update()
     {
         obtenerMonumentoActivo();
+
+        //comentado por ahora hasta verificar si es necesario
        // if (monumentoEscena) ChangePopUp();
     }
 

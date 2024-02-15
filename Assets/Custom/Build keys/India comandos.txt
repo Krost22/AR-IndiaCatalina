@@ -1,0 +1,5 @@
+java -jar C:\Users\ADMIN\Documents\India\bundletool\bundletool-all-1.15.6.jar build-apks --bundle=C:\Users\ADMIN\Documents\India\AppBundles\8\treasure_trail_v1_0_bundle8.aab --output=C:\Users\ADMIN\Documents\India\bundletool\Bundle8APKS\Treasure.apks
+
+java -jar C:\Users\ADMIN\Documents\India\bundletool\bundletool-all-1.15.6.jar install-apks --adb=C:\Users\ADMIN\AppData\Local\Android\Sdk\platform-tools\adb.exe --apks=C:\Users\ADMIN\Documents\India\bundletool\Bundle8APKS\Treasure.apks
+
+bundletool install-apks --apks=C:\Users\ADMIN\Documents\India\bundletool\Bundle8APKS\Treasure.apks

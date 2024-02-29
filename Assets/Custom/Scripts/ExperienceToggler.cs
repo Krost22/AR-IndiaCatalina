@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class ExperienceToggler : MonoBehaviour
 {
+
     //
     [SerializeField]
     private List<Image> fondosBotones;
@@ -33,6 +34,7 @@ public class ExperienceToggler : MonoBehaviour
     Color idleText = new Color(255, 255, 255, 130);
     private void Awake()
     {
+
         
         sessionOrigin = GameObject.Find("AR Session Origin");
 
@@ -47,6 +49,7 @@ public class ExperienceToggler : MonoBehaviour
 
     private void Start()
     {
+
         //Activamos el modo planos inicialmente
 
         ModoPlanos();
@@ -71,11 +74,13 @@ public class ExperienceToggler : MonoBehaviour
 
     public void LimpiarPlanos()
     {
-        GameObject[] planos = GameObject.FindGameObjectsWithTag("ARPlane");
-        foreach (var plano in planos)
-        {
-            Destroy(plano);
-        }
+            GameObject[] planos = GameObject.FindGameObjectsWithTag("ARPlane");
+            foreach (var plano in planos)
+            {
+                //Destroy(plano);
+                plano.SetActive(false);
+            }
+
     }
 
     public void ModoPlanos()

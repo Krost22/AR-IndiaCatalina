@@ -3,9 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using DanielLochner.Assets.SimpleSideMenu;
 
 public class MonumentoUI : MonoBehaviour
 {
+    public SimpleSideMenu bottomMenu;
+
     //Prefab del boton
     [SerializeField]
     private GameObject buttonPrefab;
@@ -92,6 +95,7 @@ public class MonumentoUI : MonoBehaviour
             //A�adimos los eventos en cada boton
             buttonComponent.onClick.AddListener(delegate { SendPrefab(monumento, messageReceiver); });
             buttonComponent.onClick.AddListener(delegate { LimpiarEstatuas(); });
+            buttonComponent.onClick.AddListener(delegate { bottomMenu.ToggleState(); });
             buttonComponent.onClick.AddListener(delegate { routeMaker.makeRoute(monumento.name);
                 print(routeMaker.location);
             });
